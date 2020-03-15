@@ -21,7 +21,7 @@ Output: false
 Explanation: Reads 01 from right to left. 
 Therefore it is not a palindrome.
 """
-class Solution:
+class Solution(object):
     def isPalindrome(self, x) :
         if x >= 0:
             str_x = str(x)
