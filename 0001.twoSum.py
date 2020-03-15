@@ -22,3 +22,5 @@ class Solution(object):
             else:
                 dict1[num] = i
 
+a = Solution()
+a.twoSum([2, 7, 11, 15])

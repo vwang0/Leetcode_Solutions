@@ -23,3 +23,7 @@ class Solution(object):
         y = (res< (1<<31)) * res * sign
         return y
 
+a = Solution()
+a.reverse(123)
+a.reverse(-123)
+a.reverse(120)

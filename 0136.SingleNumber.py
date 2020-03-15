@@ -23,5 +23,6 @@ class Solution(object):
         return res
         
 
-    nums = [1,1,2,3,3]
-    SingleNumber(nums)
+a= Solution()
+a.SingleNumber[2,2,1])
+a.SingleNumber([4,1,2,1,2])

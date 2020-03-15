@@ -30,3 +30,8 @@ class Solution(object):
         else:
             return 0
         return x == y
+
+a = Solution()
+a.isPalindrome(121)
+a.isPalindrome(-121)
+a.isPalindrome(10)
