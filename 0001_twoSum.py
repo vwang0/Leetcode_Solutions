@@ -14,13 +14,11 @@ return [0, 1].
 class Solution(object):
     def twoSum(self, nums, target):
         if len(nums)<2: 
-            return []
+            return 0
         dict1 = {} 
         for i, num in enumerate(nums):
-            if target - num in dict1:
+            if target - num in dict1.keys():
                 return (i, dict1[target-num])
             else:
                 dict1[num] = i
-
-
 
