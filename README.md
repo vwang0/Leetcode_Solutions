@@ -341,3 +341,6 @@
 | 1365 | How Many Numbers Are Smaller Than the Current Number        |        |
 | 1370 | Increasing Decreasing String                                |        |
 | 1374 | Generate a String With Characters That Have Odd Counts      |        |
+
+
+https://www.tablesgenerator.com/markdown_tables#
