@@ -1,5 +1,5 @@
 """
-BFS vs DFS for Binary Tree
+Breadth First Traversal (BFS) vs Depth First Traversal (DFS) for Binary Tree
 What are BFS and DFS for Binary Tree?
 A Tree is typically traversed in two ways:
 
@@ -25,11 +25,11 @@ class Solution(object):
                     seen.add(w)
             print(vertex)
 
-graph = {
-    "A": ["B", "C"],
-    "B": ["A", "C", "D"],
-    "C": ["A", "B", "D", "E"],
-    "D": ["B", "C", "E", "F"],
-    "E": ["C", "D"],
-    "F": ["D"]
-}
+# graph = {
+#     "A": ["B", "C"],
+#     "B": ["A", "C", "D"],
+#     "C": ["A", "B", "D", "E"],
+#     "D": ["B", "C", "E", "F"],
+#     "E": ["C", "D"],
+#     "F": ["D"]
+# }
