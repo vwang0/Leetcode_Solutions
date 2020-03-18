@@ -7,21 +7,21 @@
 | 183  | Customers Who Never Order                                    | x      | 3/17/2020 | Easy   |
 | 196  | Delete Duplicate Emails                                      | x      | 3/17/2020 | Easy   |
 | 197  | Rising Temperature                                           | x      | 3/17/2020 | Easy   |
-| 511  | Game Play Analysis I                                         | x      |           | Easy   |
-| 512  | Game Play Analysis II                                        | x      |           | Easy   |
-| 577  | Employee Bonus                                               | x      |           | Easy   |
-| 584  | Find Customer Referee                                        | x      |           | Easy   |
-| 586  | Customer Placing the Largest Number of Orders                | x      |           | Easy   |
-| 595  | Big Countries                                                | x      |           | Easy   |
-| 596  | Classes More Than 5 Students                                 | x      |           | Easy   |
-| 597  | Friend Requests I: Overall Acceptance Rate                   | x      |           | Easy   |
-| 603  | Consecutive Available Seats                                  | x      |           | Easy   |
-| 607  | Sales Person                                                 | x      |           | Easy   |
-| 610  | Triangle Judgement                                           | x      |           | Easy   |
-| 613  | Shortest Distance in a Line                                  | x      |           | Easy   |
-| 619  | Biggest Single Number                                        | x      |           | Easy   |
-| 620  | Not Boring Movies                                            | x      |           | Easy   |
-| 627  | Swap Salary                                                  | x      |           | Easy   |
+| 511  | Game Play Analysis I                                         | x      | 3/18/2020 | Easy   |
+| 512  | Game Play Analysis II                                        | x      | 3/18/2020 | Easy   |
+| 577  | Employee Bonus                                               | x      | 3/18/2020 | Easy   |
+| 584  | Find Customer Referee                                        | x      | 3/18/2020 | Easy   |
+| 586  | Customer Placing the Largest Number of Orders                | x      | 3/18/2020 | Easy   |
+| 595  | Big Countries                                                | x      | 3/18/2020 | Easy   |
+| 596  | Classes More Than 5 Students                                 | x      | 3/18/2020 | Easy   |
+| 597  | Friend Requests I: Overall Acceptance Rate                   | x      | 3/18/2020 | Easy   |
+| 603  | Consecutive Available Seats                                  | x      | 3/18/2020 | Easy   |
+| 607  | Sales Person                                                 | x      | 3/18/2020 | Easy   |
+| 610  | Triangle Judgement                                           | x      | 3/18/2020 | Easy   |
+| 613  | Shortest Distance in a Line                                  | x      | 3/18/2020 | Easy   |
+| 619  | Biggest Single Number                                        | x      | 3/18/2020 | Easy   |
+| 620  | Not Boring Movies                                            | x      | 3/18/2020 | Easy   |
+| 627  | Swap Salary                                                  | x      | 3/18/2020 | Easy   |
 | 1050 | Actors and Directors Who Cooperated At Least Three Times     |        |           | Easy   |
 | 1068 | Product Sales Analysis I                                     |        |           | Easy   |
 | 1069 | Product Sales Analysis II                                    |        |           | Easy   |

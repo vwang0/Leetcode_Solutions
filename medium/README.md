@@ -1,17 +1,17 @@
-| No.  |                                        Title                                        | Status | Date      |
-|------|:-----------------------------------------------------------------------------------:|-------:|-----------|
-| 2    |                                 Add Two Numbers                                     |        |           |
-| 3    |                  Longest Substring Without Repeating Characters                     |        |           |
-| 5    |                          Longest Palindromic Substring                              |        |           |
+| No.  | Title                                                                               | Status | Date      |
+|------|-------------------------------------------------------------------------------------|--------|-----------|
+| 2    | Add Two Numbers                                                                     |        |           |
+| 3    | Longest Substring Without Repeating Characters                                      |        |           |
+| 5    | Longest Palindromic Substring                                                       |        |           |
 | 6    | ZigZag Conversion                                                                   |        |           |
 | 8    | String to Integer (atoi)                                                            |        |           |
 | 11   | Container With Most Water                                                           |        |           |
 | 12   | Integer to Roman                                                                    |        |           |
 | 15   | 3Sum                                                                                |        |           |
 | 16   | 3Sum Closest                                                                        |        |           |
-| 17   | Letter Combinations of a Phone Number                                               | x      |           |
+| 17   | Letter Combinations of a Phone Number                                               | x      | 3/16/2020 |
 | 18   | 4Sum                                                                                |        |           |
-| 19   | Remove Nth Node From End of List                                                    | x      |           |
+| 19   | Remove Nth Node From End of List                                                    | x      | 3/16/2020 |
 | 22   | Generate Parentheses                                                                | x      | 3/15/2020 |
 | 24   | Swap Nodes in Pairs                                                                 |        |           |
 | 29   | Divide Two Integers                                                                 |        |           |
