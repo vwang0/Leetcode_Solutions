@@ -1,5 +1,5 @@
 https://leetcode.jp/problemdetail.php?id=511
-
+https://leetcode.jp/problems.php
 
 https://github.com/ladychili/leetcode/tree/master/sql
 
