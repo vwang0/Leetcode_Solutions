@@ -4,3 +4,11 @@ https://leetcode.jp/problems.php
 https://github.com/ladychili/leetcode/tree/master/sql
 
 https://github.com/yanshengjia/algorithm/tree/master/leetcode/SQL
+
+https://cheatsheet.dennyzhang.com/cheatsheet-leetcode-A4
+
+SQL
+https://github.com/kamyu104/LeetCode-Solutions
+
+python
+https://github.com/kamyu104/LeetCode-Solutions/tree/master/Python
