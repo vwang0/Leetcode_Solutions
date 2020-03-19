@@ -22,30 +22,30 @@
 | 619  | Biggest Single Number                                        | x      | 3/18/2020 | Easy   |
 | 620  | Not Boring Movies                                            | x      | 3/18/2020 | Easy   |
 | 627  | Swap Salary                                                  | x      | 3/18/2020 | Easy   |
-| 1050 | Actors and Directors Who Cooperated At Least Three Times     |        |           | Easy   |
-| 1068 | Product Sales Analysis I                                     |        |           | Easy   |
-| 1069 | Product Sales Analysis II                                    |        |           | Easy   |
-| 1075 | Project Employees I                                          |        |           | Easy   |
-| 1076 | Project Employees II                                         |        |           | Easy   |
-| 1082 | Sales Analysis I                                             |        |           | Easy   |
-| 1083 | Sales Analysis II                                            |        |           | Easy   |
-| 1084 | Sales Analysis III                                           |        |           | Easy   |
-| 1113 | Reported Posts                                               |        |           | Easy   |
-| 1141 | User Activity for the Past 30 Days I                         |        |           | Easy   |
-| 1142 | User Activity for the Past 30 Days II                        |        |           | Easy   |
-| 1148 | Article Views I                                              |        |           | Easy   |
-| 1173 | Immediate Food Delivery I                                    |        |           | Easy   |
-| 1179 | Reformat Department Table                                    |        |           | Easy   |
-| 1211 | Queries Quality and Percentage                               |        |           | Easy   |
-| 1241 | Number of Comments per Post                                  |        |           | Easy   |
-| 1251 | Average Selling Price                                        |        |           | Easy   |
-| 1280 | Students and Examinations                                    |        |           | Easy   |
-| 1294 | Weather Type in Each Country                                 |        |           | Easy   |
-| 1303 | Find the Team Size                                           |        |           | Easy   |
-| 1322 | Ads Performance                                              |        |           | Easy   |
-| 1327 | List the Products Ordered in a Period                        |        |           | Easy   |
-| 1350 | Students With Invalid Departments                            |        |           | Easy   |
-| 1378 | Replace Employee ID With The Unique Identifier               |        |           | Easy   |
+| 1050 | Actors and Directors Who Cooperated At Least Three Times     | x      | 3/19/2020 | Easy   |
+| 1068 | Product Sales Analysis I                                     | x      | 3/19/2020 | Easy   |
+| 1069 | Product Sales Analysis II                                    | x      | 3/19/2020 | Easy   |
+| 1075 | Project Employees I                                          | x      | 3/19/2020 | Easy   |
+| 1076 | Project Employees II                                         | x      | 3/19/2020 | Easy   |
+| 1082 | Sales Analysis I                                             | x      | 3/19/2020 | Easy   |
+| 1083 | Sales Analysis II                                            | x      | 3/19/2020 | Easy   |
+| 1084 | Sales Analysis III                                           | x      | 3/19/2020 | Easy   |
+| 1113 | Reported Posts                                               | x      | 3/19/2020 | Easy   |
+| 1141 | User Activity for the Past 30 Days I                         | x      | 3/19/2020 | Easy   |
+| 1142 | User Activity for the Past 30 Days II                        | x      | 3/19/2020 | Easy   |
+| 1148 | Article Views I                                              | x      | 3/19/2020 | Easy   |
+| 1173 | Immediate Food Delivery I                                    | x      | 3/19/2020 | Easy   |
+| 1179 | Reformat Department Table                                    | x      | 3/19/2020 | Easy   |
+| 1211 | Queries Quality and Percentage                               | x      | 3/19/2020 | Easy   |
+| 1241 | Number of Comments per Post                                  | x      | 3/19/2020 | Easy   |
+| 1251 | Average Selling Price                                        | x      | 3/19/2020 | Easy   |
+| 1280 | Students and Examinations                                    | x      | 3/19/2020 | Easy   |
+| 1294 | Weather Type in Each Country                                 | x      | 3/19/2020 | Easy   |
+| 1303 | Find the Team Size                                           | x      | 3/19/2020 | Easy   |
+| 1322 | Ads Performance                                              | x      | 3/19/2020 | Easy   |
+| 1327 | List the Products Ordered in a Period                        | x      | 3/19/2020 | Easy   |
+| 1350 | Students With Invalid Departments                            | x      | 3/19/2020 | Easy   |
+| 1378 | Replace Employee ID With The Unique Identifier               | x      | 3/19/2020 | Easy   |
 | 177  | Nth Highest Salary                                           |        |           | Medium |
 | 178  | Rank Scores                                                  |        |           | Medium |
 | 180  | Consecutive Numbers                                          |        |           | Medium |
