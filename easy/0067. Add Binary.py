@@ -10,3 +10,6 @@ Example 2:
 Input: a = "1010", b = "1011"
 Output: "10101"
 """
+class Solution(object):
+    def addBinary(self, a, b):
+        return str(bin(int(a,2)+int(b,2)))[2:]
