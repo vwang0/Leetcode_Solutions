@@ -12,3 +12,6 @@ https://github.com/kamyu104/LeetCode-Solutions
 
 python
 https://github.com/kamyu104/LeetCode-Solutions/tree/master/Python
+
+markdown table
+https://www.tablesgenerator.com/markdown_tables#
