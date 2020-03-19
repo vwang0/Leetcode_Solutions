@@ -9,22 +9,22 @@
 | 21   | Merge Two Sorted Lists                                      | x      | 3/15/2020 |
 | 26   | Remove Duplicates from Sorted Array                         | x      | 3/15/2020 |
 | 27   | Remove Element                                              | x      | 3/15/2020 |
-| 28   | Implement strStr()                                          |        |           |
-| 35   | Search Insert Position                                      |        |           |
-| 38   | Count and Say                                               |        |           |
-| 53   | Maximum Subarray                                            |        |           |
-| 58   | Length of Last Word                                         |        |           |
-| 66   | Plus One                                                    |        |           |
-| 67   | Add Binary                                                  |        |           |
-| 69   | Sqrt(x)                                                     |        |           |
-| 70   | Climbing Stairs                                             |        |           |
-| 83   | Remove Duplicates from Sorted List                          |        |           |
-| 88   | Merge Sorted Array                                          |        |           |
-| 100  | Same Tree                                                   |        |           |
-| 101  | Symmetric Tree                                              |        |           |
-| 104  | Maximum Depth of Binary Tree                                |        |           |
-| 107  | Binary Tree Level Order Traversal II                        |        |           |
-| 108  | Convert Sorted Array to Binary Search Tree                  |        |           |
+| 28   | Implement strStr()                                          | x      | 3/18/2020 |
+| 35   | Search Insert Position                                      | x      | 3/18/2020 |
+| 38   | Count and Say                                               | x      | 3/18/2020 |
+| 53   | Maximum Subarray                                            | x      | 3/18/2020 |
+| 58   | Length of Last Word                                         | x      | 3/19/2020 |
+| 66   | Plus One                                                    | x      | 3/19/2020 |
+| 67   | Add Binary                                                  | x      | 3/19/2020 |
+| 69   | Sqrt(x)                                                     | x      | 3/19/2020 |
+| 70   | Climbing Stairs                                             | x      | 3/19/2020 |
+| 83   | Remove Duplicates from Sorted List                          | x      | 3/19/2020 |
+| 88   | Merge Sorted Array                                          | x      | 3/19/2020 |
+| 100  | Same Tree                                                   | x      | 3/19/2020 |
+| 101  | Symmetric Tree                                              | x      | 3/19/2020 |
+| 104  | Maximum Depth of Binary Tree                                | x      | 3/19/2020 |
+| 107  | Binary Tree Level Order Traversal II                        | x      | 3/19/2020 |
+| 108  | Convert Sorted Array to Binary Search Tree                  | x      | 3/19/2020 |
 | 110  | Balanced Binary Tree                                        |        |           |
 | 111  | Minimum Depth of Binary Tree                                |        |           |
 | 112  | Path Sum                                                    |        |           |
