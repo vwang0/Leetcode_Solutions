@@ -25,14 +25,14 @@
 | 104  | Maximum Depth of Binary Tree                                | x      | 3/19/2020 |
 | 107  | Binary Tree Level Order Traversal II                        | x      | 3/19/2020 |
 | 108  | Convert Sorted Array to Binary Search Tree                  | x      | 3/19/2020 |
-| 110  | Balanced Binary Tree                                        |        |           |
-| 111  | Minimum Depth of Binary Tree                                |        |           |
-| 112  | Path Sum                                                    |        |           |
-| 118  | Pascal's Triangle                                           |        |           |
-| 119  | Pascal's Triangle II                                        |        |           |
-| 121  | Best Time to Buy and Sell Stock                             |        |           |
-| 122  | Best Time to Buy and Sell Stock II                          |        |           |
-| 125  | Valid Palindrome                                            |        |           |
+| 110  | Balanced Binary Tree                                        | x      |           |
+| 111  | Minimum Depth of Binary Tree                                | x      |           |
+| 112  | Path Sum                                                    | x      |           |
+| 118  | Pascal's Triangle                                           | x      |           |
+| 119  | Pascal's Triangle II                                        | x      |           |
+| 121  | Best Time to Buy and Sell Stock                             | x      |           |
+| 122  | Best Time to Buy and Sell Stock II                          | x      |           |
+| 125  | Valid Palindrome                                            | x      |           |
 | 136  | Single Number                                               | x      | 3/15/2020 |
 | 141  | Linked List Cycle                                           |        |           |
 | 155  | Min Stack                                                   |        |           |
