@@ -70,18 +70,36 @@ The read function will only be called once for each test case.
 You may assume the destination buffer array, buf, is guaranteed to have enough space for storing n characters.
 """
 
-public class Solution extends Reader4 {
-    public int read(char[] buf, int n) {
-        int index =0;
-        char[] r4 = new char[4];
-        while(index < n){
-            int c = read4(r4);
-            for(int i=0; i<c && index < n; i++){
-                buf[index++] = r4[i];
-            }
-            if(c < 4) break;
-        }
 
-        return index;
-    }
-}
+
+class Solution(object):
+    def read(self, buf, n):
+        """
+        :type buf: Destination buffer (List[str])
+        :type n: Maximum number of characters to read (int)
+        :rtype: The number of characters read (int)
+        """
+        read_bytes = 0
+        buffer = [''] * 4
+        for i in xrange(n / 4 + 1):
+            size = read4(buffer)
+            if size:
+                size = min(size, n-read_bytes)
+                buf[read_bytes:read_bytes+size] = buffer[:size]
+                read_bytes += size
+            else:
+                break
+        return read_bytes
+    
+def read4(buf):
+    global file_content
+i = 0
+while i < len(file_content) and i < 4:
+    buf[i] = file_content[i]
+    i += 1
+
+if len(file_content) > 4:
+    file_content = file_content[4:]
+else:
+    file_content = ""
+return i
