@@ -25,18 +25,18 @@
 | 104  | Maximum Depth of Binary Tree                                | x      | 3/19/2020 |
 | 107  | Binary Tree Level Order Traversal II                        | x      | 3/19/2020 |
 | 108  | Convert Sorted Array to Binary Search Tree                  | x      | 3/19/2020 |
-| 110  | Balanced Binary Tree                                        | x      |           |
-| 111  | Minimum Depth of Binary Tree                                | x      |           |
-| 112  | Path Sum                                                    | x      |           |
-| 118  | Pascal's Triangle                                           | x      |           |
-| 119  | Pascal's Triangle II                                        | x      |           |
-| 121  | Best Time to Buy and Sell Stock                             | x      |           |
-| 122  | Best Time to Buy and Sell Stock II                          | x      |           |
-| 125  | Valid Palindrome                                            | x      |           |
+| 110  | Balanced Binary Tree                                        | x      | 3/21/2020 |
+| 111  | Minimum Depth of Binary Tree                                | x      | 3/21/2020 |
+| 112  | Path Sum                                                    | x      | 3/21/2020 |
+| 118  | Pascal's Triangle                                           | x      | 3/21/2020 |
+| 119  | Pascal's Triangle II                                        | x      | 3/21/2020 |
+| 121  | Best Time to Buy and Sell Stock                             | x      | 3/21/2020 |
+| 122  | Best Time to Buy and Sell Stock II                          | x      | 3/21/2020 |
+| 125  | Valid Palindrome                                            | x      | 3/21/2020 |
 | 136  | Single Number                                               | x      | 3/15/2020 |
-| 141  | Linked List Cycle                                           |        |           |
-| 155  | Min Stack                                                   |        |           |
-| 157  | Read N Characters Given Read4                               |        |           |
+| 141  | Linked List Cycle                                           | x      | 3/22/2020 |
+| 155  | Min Stack                                                   | x      | 3/22/2020 |
+| 157  | Read N Characters Given Read4                               | x      | 3/22/2020 |
 | 160  | Intersection of Two Linked Lists                            |        |           |
 | 167  | Two Sum II - Input array is sorted                          |        |           |
 | 168  | Excel Sheet Column Title                                    |        |           |
@@ -133,7 +133,7 @@
 | 521  | Longest Uncommon Subsequence I                              |        |           |
 | 530  | Minimum Absolute Difference in BST                          |        |           |
 | 532  | K-diff Pairs in an Array                                    |        |           |
-| 538  | Convert BST to Greater Tree                                 |        |           |
+| 538  | Convert BST to Greater Tree                                 | x      | 3/22/2020 |
 | 541  | Reverse String II                                           |        |           |
 | 543  | Diameter of Binary Tree                                     |        |           |
 | 551  | Student Attendance Record I                                 |        |           |
