@@ -19,16 +19,6 @@ Explanation: All root-to-leaf paths are: 1->2->5, 1->3
 #         self.val = x
 #         self.left = None
 #         self.right = None
-
-class Solution:
-    def binaryTreePaths(self, root: TreeNode) -> List[str]:
-        if not root:
-            return []
-        return [str(root.val) + '->' + path
-                for kid in (root.left, root.right) if kid
-                for path in self.binaryTreePaths(kid)] or [str(root.val)]
-
-
 class Solution:
     def binaryTreePaths(self, root: TreeNode) -> List[str]:
         if not root: return []
@@ -43,3 +33,13 @@ class Solution:
             if not node.left and not node.right:
                 res.append(path)
         return res
+
+class Solution:
+    def binaryTreePaths(self, root: TreeNode) -> List[str]:
+        if not root:
+            return []
+        return [str(root.val) + '->' + path
+                for kid in (root.left, root.right) if kid
+                for path in self.binaryTreePaths(kid)] or [str(root.val)]
+
+
