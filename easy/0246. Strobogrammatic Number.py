@@ -17,6 +17,6 @@ class Solution(object):
         table = {'0': '0', '1': '1', '6': '9', '8': '8', '9': '6'}
         n = len(num)
         for i in range((n >> 1) + 1):
-            if num[i] not in table or table[num[i]] != num[n - i - 1]:
+            if num[i] not in table.keys() or table[num[i]] != num[n - i - 1]:
                 return False
         return True
