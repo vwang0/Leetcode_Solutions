@@ -20,7 +20,7 @@ Explanation: All root-to-leaf paths are: 1->2->5, 1->3
 #         self.left = None
 #         self.right = None
 class Solution:
-    def binaryTreePaths(self, root: TreeNode) -> List[str]:
+    def binaryTreePaths(self, root):
         if not root: return []
         stack = [(root,str(root.val))]
         res = []
