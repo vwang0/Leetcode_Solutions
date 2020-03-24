@@ -22,9 +22,24 @@ Explanation: All root-to-leaf paths are: 1->2->5, 1->3
 
 class Solution:
     def binaryTreePaths(self, root: TreeNode) -> List[str]:
-        if not root: 
+        if not root:
             return []
-        if not root.left or not root.right: 
-            return [str(root.val)]
-        return [str(root.val) + '->' + i for i in self.rootToLeafPaths(root.left)] +
-             [str(root.val) + '->' + i for i in self.rootToLeafPaths(root.right)]
+        return [str(root.val) + '->' + path
+                for kid in (root.left, root.right) if kid
+                for path in self.binaryTreePaths(kid)] or [str(root.val)]
+
+
+class Solution:
+    def binaryTreePaths(self, root: TreeNode) -> List[str]:
+        if not root: return []
+        stack = [(root,str(root.val))]
+        res = []
+        while stack:
+            node, path = stack.pop()
+            if node.left:
+                stack.append((node.left, path+"->"+str(node.left.val)))
+            if node.right:
+                stack.append((node.right, path+"->"+str(node.right.val)))
+            if not node.left and not node.right:
+                res.append(path)
+        return res
