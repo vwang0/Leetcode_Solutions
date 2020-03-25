@@ -70,4 +70,4 @@ John, Daiana, Steve and Jasmine are enrolled in departments 14, 33, 74 and 77 re
 */
 SELECT id, name 
 FROM Students 
-Where department_id NOT IN (SELECT DISTINCT id FROM Departments)
+WHERE department_id NOT IN (SELECT DISTINCT id FROM Departments)
