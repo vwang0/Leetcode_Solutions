@@ -22,4 +22,12 @@ What if elements of nums2 are stored on disk, and the memory is limited such tha
 """
 class Solution:
     def intersect(self, nums1: List[int], nums2: List[int]) -> List[int]:
-        
+        d = {}
+        for num in nums1:
+            d[num] = d.get(num,0) + 1
+        output = []
+        for num in nums2:
+            if d.get(num,0) > 0:
+                output.append(num)
+                d[num] -= 1
+        return output
