@@ -25,4 +25,6 @@ You may assume pattern contains only lowercase letters, and str contains lowerca
 """
 class Solution:
     def wordPattern(self, pattern: str, str: str) -> bool:
-        
+        s = pattern
+        t = str.split()
+        return list(map(s.find, s)) == list(map(t.index, t))
