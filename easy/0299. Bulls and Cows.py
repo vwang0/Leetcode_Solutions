@@ -22,6 +22,9 @@ Output: "1A1B"
 Explanation: The 1st 1 in friend's guess is a bull, the 2nd or 3rd 1 is a cow.
 Note: You may assume that the secret number and your friend's guess only contain digits, and their lengths are always equal.
 """
+import operator
 class Solution:
     def getHint(self, secret: str, guess: str) -> str:
-        
+        bulls = sum(map(operator.eq, secret, guess))
+        both = sum(min(secret.count(x), guess.count(x)) for x in set(guess))
+        return '%dA%dB' % (bulls, both - bulls)        
