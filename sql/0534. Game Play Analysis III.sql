@@ -52,3 +52,4 @@ FROM Activity AS A
 JOIN Activity AS B ON (
     A.player_id = B.player_id AND A.event_date <= B.event_date)
 GROUP BY B.player_id, B.event_date
+
