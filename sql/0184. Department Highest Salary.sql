@@ -36,12 +36,12 @@ WHERE e.DepartmentId = d.Id AND
     WHERE t.DepartmentId = e.DepartmentId);
 
 
--- WITH cte AS (
---     SELECT Id, Name, MAX(Salary) AS Salary, DepartmentId 
---     FROM Employee 
---     GROUP BY DepartmentId
---     )
--- SELECT d.Name as Department, cte.Name as Employee, cte. Salary
--- FROM cte, Department AS d
--- WHERE e.DepartmentId = d.Id
+SELECT d.Name as Department, e.Name as Employee, e.Salary AS Salary
+FROM Employee AS e
+    LEFT JOIN Department AS d
+    On e.DepartmentId = d.Id
+WHERE (d.Id, e.Salary) IN (
+    SELECT DepartmentId, MAX(Salary) AS Salary
+    FROM Employee
+    GROUP BY DepartmentId)
 
