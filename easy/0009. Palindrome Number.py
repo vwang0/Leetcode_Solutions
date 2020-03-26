@@ -27,9 +27,10 @@ class Solution:
             str_x = str(x)
             str_x = str_x[::-1]
             y = int(str_x)
+            return x == y
         else:
             return 0
-        return x == y
+        
 
 a = Solution()
 a.isPalindrome(121)
