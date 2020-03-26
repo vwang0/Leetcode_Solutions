@@ -9,6 +9,8 @@ https://zqt0.gitbook.io/leetcode/sql
 https://github.com/yanshengjia/algorithm/tree/master/leetcode/SQL
 
 =======Algorithm:
+leetcode all in one
+https://github.com/grandyang/leetcode
 all 1392 problems(not complete):
 https://walkccc.github.io/LeetCode/python3/
 按语言分类:
