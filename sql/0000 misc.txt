@@ -2,10 +2,14 @@ leetcode problem list:
 https://leetcode.jp/problemdetail.php?id=511
 https://leetcode.jp/problems.php
 
-=======SQL
+=======SQL lock &
 https://github.com/kamyu104/LeetCode-Solutions/tree/master/MySQL
 https://github.com/ladychili/leetcode/tree/master/sql
 https://zqt0.gitbook.io/leetcode/sql
+https://www.showsql.com/leetcode-database-problems-and-solutions/
+http://huanyouchen.github.io/2019/10/26/SQL-exercises-LeetCode-medium-part/
+=======SQL unlock
+https://nifannn.github.io/tags/#SQL
 https://github.com/yanshengjia/algorithm/tree/master/leetcode/SQL
 
 =======Algorithm:
@@ -19,7 +23,7 @@ https://github.com/kamyu104/LeetCode-Solutions/tree/master/Python
 https://github.com/yanshengjia/algorithm/tree/master/leetcode
 Python & SQL
 https://cheatsheet.dennyzhang.com/cheatsheet-leetcode-a4
-
+https://www.showsql.com/category/leetcode-algorithms/
 https://github.com/KrisYu/LeetCode-CLRS-Python
 https://nifannn.github.io/tags/#Leetcode
 
