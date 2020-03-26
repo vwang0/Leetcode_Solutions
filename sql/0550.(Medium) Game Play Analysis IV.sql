@@ -46,3 +46,5 @@ INNER JOIN
             MIN(event_date) AS first_event
      FROM Activity
      GROUP BY player_id) AS t2 ON t1.player_id = t2.player_id
+
+     
