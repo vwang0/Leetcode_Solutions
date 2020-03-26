@@ -42,3 +42,7 @@ class Logger(object):
 
         self.timeToMessages[ timestamp ].add( message )
         return True
+
+# Your Logger object will be instantiated and called as such:
+# obj = Logger()
+# param_1 = obj.shouldPrintMessage(timestamp,message)
