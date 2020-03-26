@@ -31,3 +31,4 @@ a = Solution()
 a.isPalindrome(121)
 a.isPalindrome(-121)
 a.isPalindrome(10)
+

@@ -26,3 +26,4 @@ class Solution(object):
 a = Solution()
 strs = ["flower","flow","flight"]
 a.longestCommonPrefix(strs)
+
