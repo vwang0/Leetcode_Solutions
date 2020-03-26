@@ -23,3 +23,5 @@ the above Person table should have the following rows:
 DELETE p1.* 
 FROM Person AS p1, Person AS p2
 WHERE p1.Email = p2.email AND p1.Id > p2.Id
+
+

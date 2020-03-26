@@ -24,4 +24,5 @@ class Foo:
             while not self.__has_second:
                 self.__cv.wait() 
             printThird()
-            self.__cv.notifyAll()            
+            self.__cv.notifyAll()
+
