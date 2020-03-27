@@ -46,21 +46,21 @@
 | 1327 | List the Products Ordered in a Period                        | x      | 3/19/2020 | Easy   | x    |
 | 1350 | Students With Invalid Departments                            | x      | 3/19/2020 | Easy   | x    |
 | 1378 | Replace Employee ID With The Unique Identifier               | x      | 3/19/2020 | Easy   | x    |
-| 177  | Nth Highest Salary                                           |        |           | Medium |      |
-| 178  | Rank Scores                                                  |        |           | Medium |      |
-| 180  | Consecutive Numbers                                          |        |           | Medium |      |
-| 184  | Department Highest Salary                                    |        |           | Medium |      |
-| 534  | Game Play Analysis III                                       |        |           | Medium | x    |
-| 550  | Game Play Analysis IV                                        |        |           | Medium | x    |
-| 570  | Managers with at Least 5 Direct Reports                      |        |           | Medium | x    |
-| 574  | Winning Candidate                                            |        |           | Medium | x    |
-| 578  | Get Highest Answer Rate Question                             |        |           | Medium | x    |
-| 580  | Count Student Number in Departments                          |        |           | Medium | x    |
-| 585  | Investments in 2016                                          |        |           | Medium | x    |
-| 602  | Friend Requests II: Who Has the Most Friends                 |        |           | Medium | x    |
-| 608  | Tree Node                                                    |        |           | Medium | x    |
-| 612  | Shortest Distance in a Plane                                 |        |           | Medium | x    |
-| 614  | Second Degree Follower                                       |        |           | Medium | x    |
+| 177  | Nth Highest Salary                                           | x      | 3/26/2020 | Medium |      |
+| 178  | Rank Scores                                                  | x      | 3/26/2020 | Medium |      |
+| 180  | Consecutive Numbers                                          | x      | 3/26/2020 | Medium |      |
+| 184  | Department Highest Salary                                    | x      | 3/26/2020 | Medium |      |
+| 534  | Game Play Analysis III                                       | x      | 3/26/2020 | Medium | x    |
+| 550  | Game Play Analysis IV                                        | x      | 3/26/2020 | Medium | x    |
+| 570  | Managers with at Least 5 Direct Reports                      | x      | 3/26/2020 | Medium | x    |
+| 574  | Winning Candidate                                            | x      | 3/26/2020 | Medium | x    |
+| 578  | Get Highest Answer Rate Question                             | x      | 3/26/2020 | Medium | x    |
+| 580  | Count Student Number in Departments                          | x      | 3/26/2020 | Medium | x    |
+| 585  | Investments in 2016                                          | x      | 3/26/2020 | Medium | x    |
+| 602  | Friend Requests II: Who Has the Most Friends                 | x      | 3/26/2020 | Medium | x    |
+| 608  | Tree Node                                                    | x      | 3/26/2020 | Medium | x    |
+| 612  | Shortest Distance in a Plane                                 | x      | 3/26/2020 | Medium | x    |
+| 614  | Second Degree Follower                                       | x      | 3/26/2020 | Medium | x    |
 | 626  | Exchange Seats                                               |        |           | Medium |      |
 | 1045 | Customers Who Bought All Products                            |        |           | Medium | x    |
 | 1070 | Product Sales Analysis III                                   |        |           | Medium | x    |
