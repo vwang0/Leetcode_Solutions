@@ -2,6 +2,6 @@
     "python.linting.pylintEnabled": true,
     "python.linting.enabled": true,
     "python.pythonPath": "C:\\Users\\Vin\\Anaconda3\\python.exe",
-    "python.formatting.provider": "yapf",
+    "python.formatting.provider": "autopep8",
     // "python.formatting.provider": "black"
 }
