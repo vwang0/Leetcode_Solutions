@@ -90,15 +90,15 @@
 | 349  | Intersection of Two Arrays                                  | x      | 3/25/2020 |      |
 | 350  | Intersection of Two Arrays II                               | x      | 3/25/2020 |      |
 | 359  | Logger Rate Limiter                                         | x      | 3/25/2020 | x    |
-| 367  | Valid Perfect Square                                        |        |           |      |
-| 371  | Sum of Two Integers                                         |        |           |      |
-| 374  | Guess Number Higher or Lower                                |        |           |      |
-| 383  | Ransom Note                                                 |        |           |      |
-| 387  | First Unique Character in a String                          |        |           |      |
-| 389  | Find the Difference                                         |        |           |      |
-| 392  | Is Subsequence                                              |        |           |      |
-| 401  | Binary Watch                                                |        |           |      |
-| 404  | Sum of Left Leaves                                          |        |           |      |
+| 367  | Valid Perfect Square                                        | x      | 3/27/2020 |      |
+| 371  | Sum of Two Integers                                         | x      | 3/27/2020 |      |
+| 374  | Guess Number Higher or Lower                                | x      | 3/27/2020 |      |
+| 383  | Ransom Note                                                 | x      | 3/27/2020 |      |
+| 387  | First Unique Character in a String                          | x      | 3/27/2020 |      |
+| 389  | Find the Difference                                         | x      | 3/27/2020 |      |
+| 392  | Is Subsequence                                              | x      | 3/27/2020 |      |
+| 401  | Binary Watch                                                | x      | 3/27/2020 | Tree |
+| 404  | Sum of Left Leaves                                          | x      | 3/27/2020 |      |
 | 405  | Convert a Number to Hexadecimal                             |        |           |      |
 | 408  | Valid Word Abbreviation                                     |        |           | x    |
 | 409  | Longest Palindrome                                          |        |           |      |
