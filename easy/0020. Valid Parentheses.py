@@ -42,16 +42,19 @@ class Solution(object):
 
 class Solution(object):
     def isValid(self, s):
-        left1 = "({["
-        right1 = ")}]"
-        stack1 = []
-        for str in s:
-            if str in left1:
-                stack1.append(str)
+        left = '([{'
+        right = ')]}'
+        stack = []
+        for str in s: 
+            if s in left:
+                stack.append(str)
             else:
-                if not stack1 or left1.find(stack1.pop()) != right1.find(str):
+                if not stack or left.find(stack.pop())!=right.fin(str):
                     return False
-        return not stack1
+        return not stack
 
 a = Solution()
 a.isValid('([)]')
+
+
+
