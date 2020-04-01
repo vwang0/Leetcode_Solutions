@@ -11,6 +11,7 @@ Output:
 7
 Explanation:
 One longest palindrome that can be built is "dccaccd", whose length is 7.
+保留所有偶数个字母c: 4, d:2，只保留一个奇数个字母a，或者保留奇数个字母里面成对的，比如eee, 保留ee
 */
 from collections import Counter
 class Solution:
