@@ -55,3 +55,6 @@ Result table:
 | 200        | 2011       | 15       | 9000  |
 +------------+------------+----------+-------+
 */
+SELECT product_id, MIN(year) AS first_year, quantity, price
+FROM Sales 
+GROUP BY S.product_id
