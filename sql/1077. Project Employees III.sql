@@ -1,5 +1,5 @@
 /*
-1075. Project Employees I
+1077. Project Employees III
 Table: Project
 
 +-------------+---------+
@@ -22,7 +22,7 @@ Table: Employee
 employee_id is the primary key of this table.
  
 
-Write an SQL query that reports the average experience years of all the employees for each project, rounded to 2 digits.
+Write an SQL query that reports the most experienced employees in each project. In case of a tie, report all employees with the maximum number of experience years.
 
 The query result format is in the following example:
 
@@ -43,23 +43,31 @@ Employee table:
 +-------------+--------+------------------+
 | 1           | Khaled | 3                |
 | 2           | Ali    | 2                |
-| 3           | John   | 1                |
+| 3           | John   | 3                |
 | 4           | Doe    | 2                |
 +-------------+--------+------------------+
 
 Result table:
 +-------------+---------------+
-| project_id  | average_years |
+| project_id  | employee_id   |
 +-------------+---------------+
-| 1           | 2.00          |
-| 2           | 2.50          |
+| 1           | 1             |
+| 1           | 3             |
+| 2           | 1             |
 +-------------+---------------+
-The average experience years for the first project is (3 + 2 + 1) / 3 = 2.00 and for the second project is (3 + 2) / 2 = 2.50
+Both employees with id 1 and 3 have the most experience among the employees of the first project. For the second project, the employee with id 1 has the most experience.
 */
-SELECT project_id, Round(Avg(experience_years), 2) AS average_years 
-FROM   project AS p 
-INNER JOIN employee AS e 
-ON p.employee_id = e.employee_id 
-GROUP  BY project_id 
-ORDER  BY NULL 
+
+SELECT project_id, p1.employment_id
+FROM Project AS p1
+INNER JOIN  Employee AS e1
+ON p1.employee_id = e1.employee_id
+WHERE (project_id, experience_years) IN (
+                                        SELECT project_id,
+                                                MAX(experience_years)
+                                        FROM Project AS p2
+                                        INNER JOIN Employee AS e2
+                                        ON p2.employee_id = e2.employee_id
+                                        GROUP BY project_id
+)
 
