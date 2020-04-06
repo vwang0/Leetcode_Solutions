@@ -42,3 +42,15 @@ Average for 'reviews', 'ads' and 'page views' are (7+3)/2=5, (11+7+6)/3=8, (3+12
 Business with id 1 has 7 'reviews' events (more than 5) and 11 'ads' events (more than 8) so it is an active business.
 
 */
+
+SELECT business_id
+FROM Events
+INNER JOIN (
+    SELECT event_type, AVG(occurences) AS avg
+    FROM Events
+    GROUP BY event_type
+) AS temp 
+ON Events.event_type = temp.event_type
+AND Events.occurences > temp.avg
+GROUP BY business_id
+HAVING COUNT(DISTINCT Events.event_type) >1
