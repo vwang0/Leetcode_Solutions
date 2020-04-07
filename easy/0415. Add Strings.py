@@ -40,4 +40,3 @@ class Solution(object):
             if carry != 0:
                 res = str(carry) + res
             return res            
-
