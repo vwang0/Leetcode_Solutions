@@ -51,3 +51,4 @@ FROM   employee AS e
                   FROM   employee 
                   GROUP  BY team_id) AS teams 
               ON e.team_id = teams.team_id 
+;

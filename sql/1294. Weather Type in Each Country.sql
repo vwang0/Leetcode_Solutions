@@ -92,4 +92,5 @@ SELECT c.country_name,
 FROM Countries AS c
 INNER JOIN Weather AS w ON c.country_id = w.country_id
 WHERE w.day BETWEEN '2019-11-01' AND '2019-11-30'
-GROUP BY c.country_id;
+GROUP BY c.country_id
+;

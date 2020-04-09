@@ -64,4 +64,6 @@ Fifth day is 2020-01-07, Bajrang scored 7 points and the total score for the tea
 */
 
 SELECT SUM(score_points) OVER (PARTITION BY gender, day ORDER BY gender, day) 
-FROM Scores
+FROM Scores;
+
+
