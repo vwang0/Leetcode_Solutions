@@ -60,6 +60,9 @@ Result table:
 3rd moving average from 2019-01-03 to 2019-01-09 has an average_amount of (120 + 130 + 110 + 140 + 150 + 80 + 110)/7 = 120
 4th moving average from 2019-01-04 to 2019-01-10 has an average_amount of (130 + 110 + 140 + 150 + 80 + 110 + 130 + 150)/7 = 142.86
 */
-
+SELECT visited_on, 
+SUM(amount) OVER (ORDER BY visited_on ROWS BETWEEN 6 PROCEDING AND CURRENT ROW) AS amount,
+AVG(amount) OVER (ORDER BY visited_on ROWS BETWEEN 6 PROCEDING AND CURRENT ROW) AS average_amount
+FROM Customer;
 
 
