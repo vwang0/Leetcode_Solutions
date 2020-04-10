@@ -99,6 +99,15 @@ Alex has one contact and it is a trusted contact (Alice).
 John doesn't have any contacts.
 */
 
-
+SELECT invoice_id, customer_name, price,
+        COUNT(Contacts.user_id) AS contacts_cnt,
+        SUM(CASE WHEN Contacts.name in (SELECT customer_name 
+                                        FROM Customers) THEN 1 
+                                        ELSE 0 END) AS trusted_contacts_cnt
+FROM Invoices
+INNER JOIN Customers ON Invoices.user_id = Customers.customer_id
+INNER JOIN Contacts ON Contacts.user_id = Customers.customer_id
+GROUP BY  Invoices.invoice_id, customer_name
+ORDER BY Invoices.invoice_id
 
 
