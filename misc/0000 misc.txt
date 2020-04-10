@@ -27,5 +27,9 @@ https://www.showsql.com/category/leetcode-algorithms/
 https://github.com/KrisYu/LeetCode-CLRS-Python
 https://nifannn.github.io/tags/#Leetcode
 
+Leetcode题解算法：
+https://github.com/CyC2018/CS-Notes/blob/master/notes/Leetcode%20%E9%A2%98%E8%A7%A3%20-%20%E7%9B%AE%E5%BD%95.md
+https://github.com/CyC2018/CS-Notes/tree/master/notes
+
 markdown table
 https://www.tablesgenerator.com/markdown_tables#
