@@ -26,5 +26,5 @@ class Solution:
                 res.append(word+'ma'+(i+1)*'a')
             else:
                 res.append(word[1:]+word[0]+'ma'+(i+1)*'a')
-        return ' '.join(i for i in res)
+        return ' '.join(w for w in res)
             
