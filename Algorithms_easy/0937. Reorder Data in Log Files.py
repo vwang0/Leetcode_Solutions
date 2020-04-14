@@ -26,3 +26,8 @@ Constraints:
 3 <= logs[i].length <= 100
 logs[i] is guaranteed to have an identifier, and a word after the identifier.
 """
+class Solution:
+    def reorderLogFiles(self, logs: List[str]) -> List[str]:
+        let_log = filter(lambda l: l[l.find(' ')+1].isalpha(),logs)
+        dig_log = filter(lambda l: l[l.find(' ')+1].isdigit(),logs)
+        return sorted(let_log, key = lambda x: (x[x.find(" "):], x[:x.find(" ")])) + list(dig_log)
