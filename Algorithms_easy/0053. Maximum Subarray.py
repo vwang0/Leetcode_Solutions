@@ -24,3 +24,13 @@ class Solution(object):
             maxSum = max(maxSum, cumSum)
 
         return maxSum
+
+
+class Solution:
+    def maxSubArray(self, nums: List[int]) -> int:
+        if not nums: return 0
+        sm, mn, mx = 0, 0, -float('inf')
+        for num in nums:
+            sm += num
+            mx, mn = max(mx, sm-mn), min(mn,sm)
+        return mx
