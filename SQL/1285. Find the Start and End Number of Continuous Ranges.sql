@@ -43,17 +43,10 @@ From 7 to 8 is contained in the table.
 Number 9 is missing in the table.
 Number 10 is contained in the table.
 */
-SELECT start_id,
-       min(end_id) AS end_id
+
+
+SELECT min(log_id) AS start_id, max(log_id) AS end_id
 FROM
-    (SELECT t1.log_id AS start_id
-     FROM logs AS t1
-     LEFT JOIN logs AS t2 ON t1.log_id-1 = t2.log_id
-     WHERE t2.log_id IS NULL) tt_start
-JOIN
-    (SELECT t1.log_id AS end_id
-     FROM logs AS t1
-     LEFT JOIN logs AS t2 ON t1.log_id+1 = t2.log_id
-     WHERE t2.log_id IS NULL) tt_end
-WHERE start_id<=end_id
-GROUP BY start_id
+    (SELECT log_id, ROW_NUMBER() OVER(ORDER BY log_id) AS num
+    FROM Logs) a
+GROUP BY log_id - num;
