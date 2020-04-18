@@ -39,5 +39,17 @@ Otherwise doublecounting.
 |--------------|-------------|------------|
 | 2            | 3           | 2016-06-08 |
 | 3            | 2           | 2016-06-09 |
-
 */
+SELECT id1 AS id,
+       COUNT(DISTINCT id1, id2) AS num
+FROM (
+          (SELECT requester_id AS id1,
+                  accepter_id AS id2
+           FROM request_accepted)
+      UNION ALL
+          (SELECT accepter_id AS id1,
+                  requester_id AS id2
+           FROM request_accepted)) a
+GROUP BY id1
+ORDER BY num DESC
+LIMIT 1
