@@ -21,7 +21,7 @@ The person with id '3' is a friend of people '1', '2' and '4', so he has 3 frien
 In the real world, multiple people could have the same most number of friends, can you find all these people in this case?
 */
 SELECT id,
-       COUNT(*) num
+       COUNT(*) AS num
 FROM (
           (SELECT requester_id AS id
            FROM request_accepted)
@@ -31,3 +31,13 @@ FROM (
 GROUP BY id
 ORDER BY num DESC
 LIMIT 1
+
+/*
+The assumption here is below two records cannot exist at the same time.
+Otherwise doublecounting.
+| requester_id | accepter_id | accept_date|
+|--------------|-------------|------------|
+| 2            | 3           | 2016-06-08 |
+| 3            | 2           | 2016-06-09 |
+
+*/
