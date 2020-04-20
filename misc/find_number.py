@@ -20,7 +20,8 @@ results：
 142857
 1428570
 1429857
-
+Find the smallest number N in a given range num that meet the criteria:
+N, 2N, 3N,.
 N = 100,000,000
 results：
 142857
