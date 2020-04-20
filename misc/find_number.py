@@ -8,3 +8,25 @@ def findNum(N):
         if Counter(str(i))== Counter(str(2*i)) and Counter(str(2*i)) == Counter(str(3*i)) and Counter(str(3*i)) == Counter(str(4*i)) and Counter(str(4*i)) == Counter(str(5*i)):
             return i
     return print('Not Found!')
+
+
+/*
+N = 1,000,000
+results：
+142857
+
+N = 10,000,000
+results：
+142857
+1428570
+1429857
+
+N = 100,000,000
+results：
+142857
+1428570
+1429857
+14285700
+14298570
+14299857
+*/
