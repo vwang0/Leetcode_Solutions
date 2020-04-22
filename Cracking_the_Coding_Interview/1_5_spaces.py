@@ -9,9 +9,9 @@ def replace_space(string):
 
 
 def main():
-    print replace_space('abcd')
-    print replace_space('hello world')
-    print replace_space('another working example')
+    print(replace_space('abcd'))
+    print(replace_space('hello world'))
+    print(replace_space('another working example'))
 
 if __name__ == '__main__':
     main()
