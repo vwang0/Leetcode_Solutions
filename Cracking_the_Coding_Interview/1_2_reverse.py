@@ -7,9 +7,9 @@ def reverse(string):
 
 
 def main():
-    print reverse('a')
-    print reverse('abcd')
-    print reverse('hello world')
+    print(reverse('a'))
+    print(reverse('abcd'))
+    print(reverse('hello world'))
 
 if __name__ == '__main__':
     main()

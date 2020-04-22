@@ -17,15 +17,15 @@ def remove_with_dict(string):
 
 def main():
     # Sets.
-    print remove_duplicates('a')
-    print remove_duplicates('abb')
-    print remove_duplicates('abcd')
-    print remove_duplicates('abcda')
+    print(remove_duplicates('a'))
+    print(remove_duplicates('abb'))
+    print(remove_duplicates('abcd'))
+    print(remove_duplicates('abcda'))
     # List of dictionay keys.
-    print remove_with_dict('a')
-    print remove_with_dict('abb')
-    print remove_with_dict('abcd')
-    print remove_with_dict('abcda')
+    print(remove_with_dict('a'))
+    print(remove_with_dict('abb'))
+    print(remove_with_dict('abcd'))
+    print(remove_with_dict('abcda'))
 
 if __name__ == '__main__':
     main()
