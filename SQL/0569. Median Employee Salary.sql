@@ -61,4 +61,22 @@ having
 order by
   t1.Company,
   t1.Salary,
-  t1.Id
+  t1.Id;
+
+
+--   Solution 2:
+SELECT id,
+       company,
+       salary
+FROM
+    (SELECT id,
+            company,
+            salary,
+            ROW_NUMBER() OVER (PARTITION BY company
+                               ORDER BY salary asc, id asc) as inc,
+            ROW_NUMBER() OVER (PARTITION BY company
+                               ORDER BY salary desc, id desc) as des
+     FROM employee) temp
+WHERE (inc + 1 = des)
+    OR (inc - 1 = des)
+    OR (inc = des)
