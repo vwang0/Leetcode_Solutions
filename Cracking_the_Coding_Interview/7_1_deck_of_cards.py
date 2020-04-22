@@ -33,24 +33,23 @@ class Card(object):
 
 def main():
     jack = Card('J', 'clubs')
-    print jack
+    print(jack)
 
     king = Card('K', 'hearts')
-    print king
-    print 'K > J:', king > jack
+    print(king)
+    print('K > J:', king > jack)
 
     ten = Card(10, 'diamonds')
-    print ten
-    print '10 < J:', ten < jack
+    print(ten)
+    print('10 < J:', ten < jack)
 
     queen = Card('Q', 'spades')
-    print queen
-    print 'J < Q < K:', jack < queen < king
+    print(queen)
+    print('J < Q < K:', jack < queen < king)
 
     joker = Card('Joker', game_value=100)
-    print joker
-    print 'Joker > K:', joker > king
-
+    print((joker))
+    print('Joker > K:', joker > king)
 
 if __name__ == '__main__':
     main()

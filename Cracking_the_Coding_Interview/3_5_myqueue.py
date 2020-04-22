@@ -44,10 +44,10 @@ def main():
     queue.add(1)
     queue.add(2)
     queue.add(3)
-    print queue.size()    # 3
-    print queue.peek()    # 1
-    print queue.remove()  # 1
-    print queue.peek()    # 2
+    print(queue.size())    # 3
+    print(queue.peek())    # 1
+    print(queue.remove())  # 1
+    print(queue.peek() )   # 2
 
 if __name__ == '__main__':
     main()

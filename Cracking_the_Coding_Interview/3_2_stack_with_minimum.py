@@ -47,13 +47,13 @@ def main():
     stack.push(2)
     stack.push(3)
     node = stack.pop()
-    print node.minimum
+    print(node.minimum)
     stack.push(0)
     stack.push(4)
     node = stack.pop()
-    print node.min()
-    print stack.min()
-    print stack
+    print(node.min())
+    print(stack.min()
+    print(stack)
 
 if __name__ == '__main__':
     main()

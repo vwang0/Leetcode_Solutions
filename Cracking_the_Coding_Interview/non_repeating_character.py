@@ -49,10 +49,10 @@ def first_value_queue(ordered_dict):
 
 def main():
     d = iterable_to_ordered_dict('abacaddeea')
-    print find_first_value(d)  # b
+    print(find_first_value(d))  # b
     queue = first_value_queue(d)
-    print queue.popleft()      # b
-    print queue.popleft()      # c
+    print(queue.popleft())      # b
+    print(queue.popleft())      # c
 
 
 if __name__ == '__main__':

@@ -42,11 +42,11 @@ def main():
     stack.push(4)
     stack.push(5)
     stack.push(6)
-    print stack
+    print(stack)
     stack.pop()
     stack.pop()
     stack.pop()
-    print stack
+    print(stack)
 
 if __name__ == '__main__':
     main()

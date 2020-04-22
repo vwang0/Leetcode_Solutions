@@ -25,8 +25,8 @@ def custom_sort(stack):
 
 def main():
     stack = [1, 3, 2, 4, 6, 5]
-    print built_in_sort(stack)
-    print custom_sort(stack)
+    print(built_in_sort(stack))
+    print(custom_sort(stack))
 
 
 if __name__ == '__main__':

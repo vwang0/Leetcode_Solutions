@@ -10,9 +10,9 @@ def is_rotation(first, second):
 
 
 def main():
-    print is_rotation('apple', 'pleap')  # True
-    print is_rotation('apple', 'ppale')  # False
-    print is_rotation('zach', 'chza')    # True
+    print(is_rotation('apple', 'pleap'))  # True
+    print(is_rotation('apple', 'ppale'))  # False
+    print(is_rotation('zach', 'chza'))    # True
 
 
 if __name__ == '__main__':

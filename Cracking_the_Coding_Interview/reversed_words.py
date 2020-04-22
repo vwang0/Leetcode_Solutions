@@ -18,7 +18,7 @@ def reverse_words(sentence):
 
 def main():
     sentence = "I like to write Python."
-    print reverse_words(sentence)
+    print(reverse_words(sentence))
 
 
 if __name__ == '__main__':

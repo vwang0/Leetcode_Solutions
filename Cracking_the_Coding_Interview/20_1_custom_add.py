@@ -35,20 +35,20 @@ def array_add(first, second):
 
 def main():
     # Sum way.
-    print sum_add(0, 1)       # 1
-    print sum_add(2, 3)       # 5
-    print sum_add(20, 12)     # 32
-    print sum_add(50, 49)     # 99
+    print(sum_add(0, 1))       # 1
+    print(sum_add(2, 3))       # 5
+    print(sum_add(20, 12))     # 32
+    print(sum_add(50, 49) )    # 99
     # Binary way.
-    print binary_add(0, 1)    # 1
-    print binary_add(2, 3)    # 5
-    print binary_add(20, 12)  # 32
-    print binary_add(50, 49)  # 99
+    print(binary_add(0, 1))    # 1
+    print(binary_add(2, 3))    # 5
+    print(binary_add(20, 12))  # 32
+    print(binary_add(50, 49))  # 99
     # With bytearrays.
-    print array_add(0, 1)     # 1
-    print array_add(2, 3)     # 5
-    print array_add(20, 12)   # 32
-    print array_add(50, 49)   # 99
+    print(array_add(0, 1))     # 1
+    print(array_add(2, 3))     # 5
+    print(array_add(20, 12))   # 32
+    print(array_add(50, 49))   # 99
 
 
 if __name__ == '__main__':

@@ -18,9 +18,9 @@ def main():
         counter = Counter(words)
     for count, length in counter.items():
         if len(str(count)) == 2:
-            print "%d : %d" % (count, length)
+            print("%d : %d" % (count, length))
         else:
-            print "%d  : %d" % (count, length)
+            print("%d  : %d" % (count, length))
 
 
 if __name__ == '__main__':
