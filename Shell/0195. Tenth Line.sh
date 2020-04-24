@@ -1,6 +1,6 @@
 # """
 # 195. Tenth Line
-# Given a text file file.txt, print just the 10th line of the file.
+# Given a text file file.txt, printjust the 10th line of the file.
 
 # Example:
 
@@ -24,4 +24,4 @@
 # 2. There's at least three different solutions. Try to explore all possibilities.
 # """
 # Read from the file file.txt and output the tenth line to stdout.
-awk 'NR == 10 {print $0}' file.txt
+awk 'NR == 10 {print$0}' file.txt

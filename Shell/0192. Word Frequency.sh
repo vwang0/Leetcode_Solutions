@@ -16,4 +16,4 @@
 # Note:
 # Don't worry about handling ties, it is guaranteed that each word's frequency count is unique.
 # Could you write it in one-line using Unix pipes?
-cat words.txt | tr -s ' ' '\n' | sort | uniq -c | sort -r | awk '{ print $2, $1 }'
+cat words.txt | tr -s ' ' '\n' | sort | uniq -c | sort -r | awk '{ print$2, $1 }'

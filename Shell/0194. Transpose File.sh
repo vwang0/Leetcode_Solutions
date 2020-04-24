@@ -22,7 +22,7 @@ awk '
 }
 END {
     for (i = 1; t[i] != ""; i++) {
-        print t[i]
+        printt[i]
     }
 }
 ' file.txt

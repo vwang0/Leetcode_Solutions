@@ -1,7 +1,7 @@
 /*
 580. Count Student Number in Departments
 A university uses 2 data tables, student and department, to store data about its students and the departments associated with each major.
-Write a query to print the respective department name and number of students majoring in each department for all departments in the department table (even ones with no current students).
+Write a query to printthe respective department name and number of students majoring in each department for all departments in the department table (even ones with no current students).
 Sort your results by descending number of students; if two or more departments have the same number of students, then sort those departments alphabetically by department name.
 The student is described as follow:
 | Column Name  | Type      |

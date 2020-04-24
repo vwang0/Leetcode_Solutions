@@ -340,7 +340,7 @@
 | 651  | 4 Keys Keyboard                                                                     |        |           | x    |
 | 652  | Find Duplicate Subtrees                                                             |        |           |      |
 | 654  | Maximum Binary Tree                                                                 |        |           |      |
-| 655  | Print Binary Tree                                                                   |        |           |      |
+| 655  | printBinary Tree                                                                   |        |           |      |
 | 658  | Find K Closest Elements                                                             |        |           |      |
 | 659  | Split Array into Consecutive Subsequences                                           |        |           |      |
 | 662  | Maximum Width of Binary Tree                                                        |        |           |      |
@@ -562,8 +562,8 @@
 | 1110 | Delete Nodes And Return Forest                                                      |        |           |      |
 | 1111 | Maximum Nesting Depth of Two Valid Parentheses Strings                              |        |           |      |
 | 1112 | Highest Grade For Each Student                                                      |        |           |      |
-| 1115 | Print FooBar Alternately                                                            |        |           |      |
-| 1116 | Print Zero Even Odd                                                                 |        |           |      |
+| 1115 | printFooBar Alternately                                                            |        |           |      |
+| 1116 | printZero Even Odd                                                                 |        |           |      |
 | 1117 | Building H2O                                                                        |        |           |      |
 | 1120 | Maximum Average Subtree                                                             |        |           | x    |
 | 1123 | Lowest Common Ancestor of Deepest Leaves                                            |        |           |      |
@@ -642,7 +642,7 @@
 | 1261 | Find Elements in a Contaminated Binary Tree                                         |        |           |      |
 | 1262 | Greatest Sum Divisible by Three                                                     |        |           |      |
 | 1264 | Page Recommendations                                                                |        |           |      |
-| 1265 | Print Immutable Linked List in Reverse                                              |        |           | x    |
+| 1265 | printImmutable Linked List in Reverse                                              |        |           | x    |
 | 1267 | Count Servers that Communicate                                                      |        |           |      |
 | 1268 | Search Suggestions System                                                           |        |           |      |
 | 1270 | All People Report to the Given Manager                                              |        |           |      |
@@ -671,7 +671,7 @@
 | 1318 | Minimum Flips to Make a OR b Equal to c                                             |        |           |      |
 | 1319 | Number of Operations to Make Network Connected                                      |        |           |      |
 | 1321 | Restaurant Growth                                                                   |        |           |      |
-| 1324 | Print Words Vertically                                                              |        |           |      |
+| 1324 | printWords Vertically                                                              |        |           |      |
 | 1325 | Delete Leaves With a Given Value                                                    |        |           |      |
 | 1328 | Break a Palindrome                                                                  |        |           |      |
 | 1329 | Sort the Matrix Diagonally                                                          |        |           |      |

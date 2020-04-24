@@ -23,3 +23,15 @@ a.reverse(123)
 a.reverse(-123)
 a.reverse(120)
 
+class Solution:
+    def reverse(self, x: int) -> int:
+        if x>-2**31  and x < 2**31-1 :
+            sign = (x>0) - (x<0)
+            x_str = str(sign*x)
+            res = sign*int(''.join(i for i in x_str[::-1])) 
+            if res>-2**31  and res < 2**31-1 :
+                return res
+            else: 
+                return 0
+        else:
+            return 0

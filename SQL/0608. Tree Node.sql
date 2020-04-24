@@ -17,7 +17,7 @@ Root: if the node is the root of the tree.
 Inner: If the node is neither a leaf node nor a root node.
  
 
-Write a query to print the node id and the type of the node. Sort your output by the node id. The result for the above sample is:
+Write a query to printthe node id and the type of the node. Sort your output by the node id. The result for the above sample is:
  
 
 +----+------+
