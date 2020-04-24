@@ -59,13 +59,14 @@ a.isValid('([)]')
 
 
 
-class Solution(object):
-    def isValid(self, s):
-        right = '({['
-        left = ')}]'
+class Solution:
+    def isValid(self, s: str) -> bool:
+        if not s: return True
+        left = '({['
+        right = ')}]'
         stack = []
         for char in s:
-            if char in right:
+            if char in left:
                 stack.append(char)
             else:
                 if not stack or left.find(stack.pop()) != right.find(char):
