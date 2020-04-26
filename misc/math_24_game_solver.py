@@ -1,6 +1,14 @@
 /*
 math 24 game solution
 */
+import operator
+from itertools import product, permutations
+ 
+def mydiv(n, d):
+    return n / d if d != 0 else 9999999
+ 
+syms = [operator.add, operator.sub, operator.mul, mydiv]
+op = {sym: ch for sym, ch in zip(syms, '+-*/')}
 
 def solve24(nums):
     for x, y, z in product(syms, repeat=3):
