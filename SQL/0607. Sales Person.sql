@@ -47,6 +47,24 @@ According to order '3' and '4' in table orders, it is easy to
 tell only salesperson 'John' and 'Alex' have sales to company 'RED',
 so we need to output all the other names in table salesperson.
 */
+-- Solution 1
+SELECT name
+FROM salesperson
+WHERE sales_id NOT IN
+        ( SELECT sales_id
+         FROM orders
+         WHERE com_id = 1 );
+
+-- Solution 2
+SELECT s.NAME
+FROM salesperson s
+WHERE sales_id NOT IN
+        (SELECT sales_id
+         FROM orders o
+         LEFT JOIN company c ON o.com_id = c.com_id
+         WHERE c.NAME = 'RED')
+
+-- Solution 3
 WITH cte1 AS (
     SELECT o.sales_id
     FROM orders AS o
