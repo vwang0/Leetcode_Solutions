@@ -56,7 +56,7 @@ WHERE sales_id NOT IN
          WHERE com_id = 1 );
 
 -- Solution 2
-SELECT s.NAME
+SELECT s.name
 FROM salesperson s
 WHERE sales_id NOT IN
         (SELECT sales_id
