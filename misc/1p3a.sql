@@ -3,62 +3,6 @@ https://www.1point3acres.com/bbs/thread-529697-1-1.html
 https://medium.com/jbennetcodes/how-to-rewrite-your-sql-queries-in-pandas-and-more-149d341fc53e
 */
 
-/*
-The input spending table is
-member_id    date    channel   spend
-1001    1/1/2018    mobile    100
-1001    1/1/2018    desktop    100
-1002    1/1/2018    mobile    100. 1point3acres
-1002    1/2/2018    mobile    100
-1003    1/1/2018    desktop    100
-1003    1/2/2018    desktop    100
-
-The output data is
-date    channel    total_spend    total_members
-1/1/2018    desktop    100    1
-1/1/2018    mobile    100    1
-1/1/2018    both    200    1
-1/2/2018    desktop    100    1
-1/2/2018    mobile    100    1
-*/
-
-/*
-Q1:
-Problem:  Member can make purchase via either mobile  or desktop platform. 
-Using the data table to determine the total number of member and revenue 
-for mobile-only, desktop_only and mobile_desktop.
-*/
--- SQL
-WITH member_spend AS(
-SELECT date, member_id,
-             SUM(CASE
-                     WHEN channel == ‘mobile’ THEN spend
-                     ELSE 0
-                 END) AS mobile_spend,
-             SUM(CASE
-                     WHEN channel == ‘desktop’ THEN spend
-                     ELSE 0
-                 END) AS desktop_spend
-FROM spending
-GROUP BY date, member_id    
-)
-
-SELECT date,
-CASE WHEN mobile_spend > 0 AND desktop_spend = 0 THEN ‘mobile’
-         WHEN mobile_spend = 0 AND desktop_spend > 0 THEN ‘desktop’
-         WHEN mobile_spend > 0 AND desktop_spend > 0 THEN ‘both’
-         END AS channel,
-SUM(mobile_spend + desktop_spend) AS total_spend,
-COUNT(*) AS total_members
-FROM member_spend
-GROUP BY
-date,
-CASE WHEN mobile_spend > 0 AND desktop_spend = 0 THEN ‘mobile’
-         WHEN mobile_spend = 0 AND desktop_spend > 0 THEN ‘desktop’
-         WHEN mobile_spend > 0 AND desktop_spend > 0 THEN ‘both’
-         END
-;
-
 -- Python pandas
 /*
 member_spend[member_spend.mobile_spend>0 & member_spend.desktop_spend==0], ‘channel’] = ‘mobile’
@@ -118,7 +62,57 @@ table[(table.company_name == ‘Microsoft’) & (table.next_company == ‘Google
 
 -----------------------------------------
 /*
+The input spending table is
+member_id    date    channel   spend
+1001    1/1/2018    mobile    100
+1001    1/1/2018    desktop    100
+1002    1/1/2018    mobile    100
+1002    1/2/2018    mobile    100
+1003    1/1/2018    desktop    100
+1003    1/2/2018    desktop    100
 
-*/
+The output data is
+date    channel    total_spend    total_members
+1/1/2018    desktop    100    1
+1/1/2018    mobile    100    1
+1/1/2018    both    200    1
+1/2/2018    desktop    100    1
+1/2/2018    mobile    100    1
+*/ /*
+Q1:
+Problem:  Member can make purchase via either mobile  or desktop platform.
+Using the data table to determine the total number of member and revenue
+for mobile-only, desktop_only and mobile_desktop.
+*/ -- SQL
+WITH member_spend AS
+    (SELECT date, member_id, SUM(CASE
+                                    WHEN channel = ‘mobile’ THEN spend
+                                    ELSE 0
+                                END) AS mobile_spend, 
+                             SUM(CASE
+                                    WHEN channel = ‘desktop’ THEN spend
+                                    ELSE 0
+                                END) AS desktop_spend
+     FROM spending
+     GROUP BY date, member_id)
+SELECT date, CASE
+                 WHEN mobile_spend > 0
+                      AND desktop_spend = 0 THEN ‘mobile’
+                 WHEN mobile_spend = 0
+                      AND desktop_spend > 0 THEN ‘desktop’
+                 WHEN mobile_spend > 0
+                      AND desktop_spend > 0 THEN ‘both’
+             END AS channel,
+             SUM(mobile_spend + desktop_spend) AS total_spend,
+             COUNT(*) AS total_members
+FROM member_spend
+GROUP BY date, CASE
+                   WHEN mobile_spend > 0
+                        AND desktop_spend = 0 THEN ‘mobile’
+                   WHEN mobile_spend = 0
+                        AND desktop_spend > 0 THEN ‘desktop’
+                   WHEN mobile_spend > 0
+                        AND desktop_spend > 0 THEN ‘both’
+               END ;
 
 
