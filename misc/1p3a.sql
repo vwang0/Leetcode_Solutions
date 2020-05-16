@@ -2,18 +2,6 @@
 https://www.1point3acres.com/bbs/thread-529697-1-1.html
 https://medium.com/jbennetcodes/how-to-rewrite-your-sql-queries-in-pandas-and-more-149d341fc53e
 */
-
--- Python pandas
-/*
-member_spend[member_spend.mobile_spend>0 & member_spend.desktop_spend==0], ‘channel’] = ‘mobile’
-member_spend[member_spend.mobile_spend==0 & member_spend.desktop_spend>0], ‘channel’] = ‘desktop’
-member_spend[member_spend.mobile_spend>0 & member_spend.desktop_spend>0], ‘channel’] = ‘both’
-tot_members = member_spend.groupby([‘date’, ‘channel’]).size().to_frame(‘tot_members’).reset_index()
-tot_spend = member_spend.groupby([‘date’, ‘channel’].agg({‘mobile_spend’:sum, ‘desktop_spend’:sum}).to_frame([‘mobile_spend’, ‘desktop_spend’])
-tot_spend[‘tot_spend’] = tot_spend[‘mobile_spend’] + tot_spend[‘desktop_spend’]
-output = tot_members.concat(tot_spend[‘tot_spend’])
-*/
-
 ----------------------------------------------------
 /*
 Problem: table emp_history
@@ -115,4 +103,13 @@ GROUP BY date, CASE
                         AND desktop_spend > 0 THEN ‘both’
                END ;
 
-
+-- Python pandas
+/*
+member_spend[member_spend.mobile_spend>0 & member_spend.desktop_spend==0], ‘channel’] = ‘mobile’
+member_spend[member_spend.mobile_spend==0 & member_spend.desktop_spend>0], ‘channel’] = ‘desktop’
+member_spend[member_spend.mobile_spend>0 & member_spend.desktop_spend>0], ‘channel’] = ‘both’
+tot_members = member_spend.groupby([‘date’, ‘channel’]).size().to_frame(‘tot_members’).reset_index()
+tot_spend = member_spend.groupby([‘date’, ‘channel’].agg({‘mobile_spend’:sum, ‘desktop_spend’:sum}).to_frame([‘mobile_spend’, ‘desktop_spend’])
+tot_spend[‘tot_spend’] = tot_spend[‘mobile_spend’] + tot_spend[‘desktop_spend’]
+output = tot_members.concat(tot_spend[‘tot_spend’])
+*/
