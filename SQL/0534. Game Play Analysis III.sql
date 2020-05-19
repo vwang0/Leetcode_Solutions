@@ -41,10 +41,16 @@ For the player with id 1, 5 + 6 = 11 games played by 2016-05-02, and 5 + 6 + 1 =
 For the player with id 3, 0 + 5 = 5 games played by 2018-07-03.
 Note that for each player we only care about the days when the player logged in.
 */
+SELECT player_id, event_date,
+    SUM(games_played) OVER (PARTITION BY player_id ORDER BY event_date) AS games_played_so_far
+FROM Activity
+;
+
+
 SELECT player_id,event_date,
        SUM(games_played) OVER (PARTITION BY player_id ORDER BY event_date) AS games_played_so_far
 FROM Activity 
-
+;
 
 SELECT B.player_id,B.event_date,
        SUM(A.games_played) AS games_played_so_far
@@ -52,4 +58,4 @@ FROM Activity AS A
 JOIN Activity AS B ON (
     A.player_id = B.player_id AND A.event_date <= B.event_date)
 GROUP BY B.player_id, B.event_date
-
+;
