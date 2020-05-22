@@ -27,7 +27,7 @@ AND a.company_name = 'Microsoft'
 AND b.company_name = 'Google'
 ;
 /*
-Q2:
+Q2:count members who directly moved from Microsoft to Google?
 (Microsoft - Linkedin - Google doesn't count)
  1) SQL solution: (assumption: no end date. define move
 from company A to company B if the start date of company B is after the

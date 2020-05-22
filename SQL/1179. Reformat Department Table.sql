@@ -54,4 +54,5 @@ SELECT id,
        SUM(IF(month = 'Nov', revenue, NULL)) AS Nov_Revenue, 
        SUM(IF(month = 'Dec', revenue, NULL)) AS Dec_Revenue 
 FROM   department 
-GROUP  BY id;
+GROUP  BY id
+;
