@@ -26,12 +26,14 @@ Output:
 Explanation:
 question 285 has answer rate 1/1, while question 369 has 0/1 answer rate, so output 285.
 */
+-- Solution 1
 SELECT question_id AS survey_log
 FROM survey_log
 GROUP BY question_id
 ORDER BY COUNT(answer_id)/COUNT(IF(action = 'show', 1, 0)) DESC
 LIMIT 1
 
+-- Solution 2
 SELECT question_id AS survey_log
 FROM survey_log
 GROUP BY question_id
