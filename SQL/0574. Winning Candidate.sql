@@ -35,6 +35,18 @@ Notes:
 You may assume there is no tie, in other words there will be at most one winning candidate.
 
 */
+
+-- Solution 1
+SELECT Name
+FROM Candidate
+WHERE id =
+        (SELECT CandidateId
+         FROM Vote
+         GROUP BY CandidateId
+         ORDER BY COUNT(CandidateId) DESC
+         Limit 1)
+
+-- Solution 2
 select C.Name
 from Candidate as C
 join
