@@ -88,7 +88,17 @@ Products with product_id = 5 is ordered in February a total of (50 + 50) = 100.
 --        INNER JOIN products p 
 --                ON o.product_id = p.product_id 
 
+-- Solution 1
+SELECT product_name,
+       SUM(unit) AS unit
+FROM Orders O
+JOIN Products P ON O.product_id =P .product_id
+WHERE order_date BETWEEN '2020-02-01' AND '2020-02-29'
+GROUP BY product_name
+HAVING SUM(unit) >= 100
 
+
+-- Solution 2
 WITH cte AS (
     SELECT product_id, SUM(unit) AS unit
     FROM Orders
