@@ -62,10 +62,10 @@ SELECT id,
                      FROM tree atree) THEN 'Inner'
            ELSE tree.id NOT IN 
                     (SELECT atree.p_id
-                     FROM tree atree) Then 'Leaf'
+                     FROM tree atree) THEN 'Leaf'
        END AS Type
 FROM tree
-ORDER BY Id;
+ORDER BY id;
 
 
 SELECT atree.id,
