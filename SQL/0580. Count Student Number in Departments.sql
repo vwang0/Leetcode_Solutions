@@ -37,9 +37,11 @@ The Output should be:
 | Science     | 1              |
 | Law         | 0              |
 */
-SELECT dept_name, COUNT(student_id) AS student_number 
-FROM department AS d 
-LEFT JOIN student AS s 
-ON d.dept_id = s.dept_id
+SELECT dept_name,
+       IFNULL(COUNT(student_id),0) AS student_number
+FROM department d
+LEFT JOIN student s ON d.dept_id = s.dept_id
 GROUP BY dept_name
-ORDER BY student_number DESC, dept_name;
+ORDER BY student_number DESC,
+         dept_name ;
+
