@@ -1,4 +1,4 @@
-/*
+'''
 443. String Compression
 Given an array of characters, compress it in-place.
 The length after compression must always be smaller than or equal to the original array.
@@ -31,7 +31,7 @@ Notice each digit has it's own entry in the array.
 Note:
 All characters have an ASCII value in [35, 126].
 1 <= len(chars) <= 1000.
-*/
+'''
 from itertools import groupby
 class Solution:
     def compress(self, chars: List[str]) -> int:
