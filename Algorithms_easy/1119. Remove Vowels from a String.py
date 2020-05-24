@@ -17,7 +17,7 @@ S consists of lowercase English letters only.
 */
 
 class Solution:
-    def removeVowels(self, S: str) -> str:
+    def removeVowels(self, S: str):
         res = ''
         for char in S:
             if char not in 'aeiou':
