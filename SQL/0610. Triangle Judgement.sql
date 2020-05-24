@@ -19,7 +19,7 @@ For the sample data above, your query should return the follow
 | 13 | 15 | 30 | No       |
 | 10 | 20 | 15 | Yes      |
 */
-
+-- Solution 1
 SELECT x,
        y, 
        z,
@@ -27,6 +27,7 @@ SELECT x,
        END AS triangle 
 FROM triangle
 
+-- Solution 2
 SELECT *, 
     IF(x + y > z AND x + z > y AND y + z > x, 'Yes', 'No') AS triangle 
 FROM triangle;
