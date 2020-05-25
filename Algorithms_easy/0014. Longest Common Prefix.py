@@ -15,6 +15,7 @@ Explanation: There is no common prefix among the input strings.
 Note:
 All given inputs are in lowercase letters a-z.
 """
+# Solution 1
 class Solution(object):
     def longestCommonPrefix(self, strs):
         prefix = min(strs, key = len) if strs else ''
@@ -27,3 +28,14 @@ a = Solution()
 strs = ["flower","flow","flight"]
 a.longestCommonPrefix(strs)
 
+# Solution 2
+class Solution:
+    def longestCommonPrefix(self, strs: List[str]):
+        if not strs: return ""
+        res = min(strs, key = len)
+        for s in strs:
+            for j in range(len(res)):
+                if s[j]!=res[j]:
+                    res = res[:j]
+                    break
+        return res
