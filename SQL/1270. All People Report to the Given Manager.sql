@@ -53,6 +53,32 @@ The employee with employee_id 7 report his work indirectly to the head of the co
 The employees with employee_id 3, 8 and 9 don't report their work to head of company directly or indirectly. 
 */
 
+
+-- mysql solution 1
+SELECT DISTINCT e1.employee_id
+FROM Employees e1,
+               Employees e2,
+                         Employees e3
+WHERE e1.manager_id = e2.employee_id
+    AND e2.manager_id = e3.employee_id
+    AND e1.employee_id != 1
+    AND e3.manager_id = 1
+
+-- MS SQL SOlution 
+# Write your MySQL query statement below
+WITH CTE AS
+    ( SELECT employee_id
+     FROM Employees
+     WHERE manager_id = 1
+         AND employee_id != 1
+     UNION ALL SELECT e.employee_id
+     FROM CTE c
+     INNER JOIN Employees e ON c.employee_id = e.manager_id)
+SELECT employee_id
+FROM CTE
+ORDER BY employee_id OPTION (MAXRECURSION 3);
+
+-- mysql soultioin
 select t1.employee_id
 from Employees as t1
 inner join Employees as t2 on t1.manager_id = t2.employee_id
