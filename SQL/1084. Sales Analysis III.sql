@@ -59,11 +59,10 @@ Result table:
 +-------------+--------------+
 The product with id 1 was only sold in spring 2019 while the other two were sold after.
 */
-SELECT product_id, 
-       product_name 
-FROM   product 
-WHERE  product_id NOT IN (
-        SELECT product_id 
-        FROM   sales
-        WHERE  sale_date NOT 
-        BETWEEN '2019-01-01' AND '2019-03-31'); 
+SELECT product_id,
+       product_name
+FROM Product
+WHERE product_id NOT IN
+              (SELECT product_id
+               FROM Sales
+               WHERE sale_date NOT BETWEEN '2019-01-01' AND '2019-03-31' );

@@ -60,14 +60,12 @@ Result table:
 The buyer with id 1 bought an S8 but didn't buy an iPhone. The buyer with id 3 bought both.
 */
 
-SELECT DISTINCT buyer_id 
-FROM   sales 
-INNER JOIN product 
-ON sales.product_id = product.product_id 
-WHERE  product.product_name = "s8" AND buyer_id NOT IN (
-    SELECT DISTINCT buyer_id 
-    FROM   sales 
-    INNER JOIN product 
-    ON sales.product_id = product.product_id 
-    WHERE  product.product_name = "iphone"
-    ) 
+SELECT DISTINCT buyer_id
+FROM Sales S
+JOIN Product P ON S.product_id = P.product_id
+WHERE P.product_name = 'S8'
+    AND buyer_id NOT IN
+        (SELECT DISTINCT buyer_id
+         FROM Sales S
+         JOIN Product P ON S.product_id = P.product_id
+         WHERE P.product_name ='iPhone' )
