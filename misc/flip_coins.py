@@ -46,7 +46,8 @@ def flip_pattern(end_pattern=['H', 'T'], print_opt=False):
     while current_condition != end_pattern:
         flip_list.append(flip_coin())
         if len(flip_list) >= len(end_pattern):
-            current_condition = [flip_list[i] for i in range(current_index - len(end_pattern) +1 , current_index + 1)]
+            current_condition = flip_list[-len(end_pattern):]            
+            # current_condition = [flip_list[i] for i in range(current_index - len(end_pattern) +1 , current_index + 1)]
         else:
             pass
         current_index +=1
