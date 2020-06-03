@@ -77,3 +77,13 @@ FROM
    GROUP BY ad_id) a
 ORDER BY ctr DESC,
          ad_id ASC
+
+
+-- Write your MySQL query statement below
+
+SELECT ad_id,
+       ROUND(100*IFNULL(SUM(IF(action='Clicked', 1, 0))/SUM(IF(action='Clicked',1, IF(action='Viewed', 1, 0))),0),2) AS ctr
+FROM Ads
+GROUP BY ad_id
+ORDER BY ctr DESC,
+         ad_id
