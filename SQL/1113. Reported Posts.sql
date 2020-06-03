@@ -54,3 +54,12 @@ FROM   actions
 WHERE  action = 'report' 
        AND action_date = '2019-07-04' 
 GROUP  BY extra
+
+
+SELECT extra AS report_reason,
+       COUNT(DISTINCT post_id) AS report_count
+FROM Actions
+WHERE action_date = '2019-07-04'
+       AND extra IS NOT NULL
+       AND extra <> 'love'
+GROUP BY report_reason
