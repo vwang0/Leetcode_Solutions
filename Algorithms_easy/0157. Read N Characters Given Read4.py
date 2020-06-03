@@ -72,6 +72,35 @@ You may assume the destination buffer array, buf, is guaranteed to have enough s
 
 
 
+class Solution:
+    def read(self, buf, n):
+        """
+        :type buf: Destination buffer (List[str])
+        :type n: Number of characters to read (int)
+        :rtype: The number of actual characters read (int)
+        """
+        if n == 0:
+            return 0
+        
+        if n % 4 == 0:
+            number_of_read4 = (n // 4)
+        else:
+            number_of_read4 = (n // 4) + 1
+            
+        count = 0
+        
+        for _ in range(number_of_read4):
+            local_buf = [None] * 4
+            read4(local_buf)
+            for c in local_buf:
+                if c is None or count >= n:
+                    break
+                buf[count] = c
+                count += 1
+            
+        return count
+
+
 class Solution(object):
     def read(self, buf, n):
         """
@@ -79,27 +108,15 @@ class Solution(object):
         :type n: Maximum number of characters to read (int)
         :rtype: The number of characters read (int)
         """
-        read_bytes = 0
-        buffer = [''] * 4
-        for i in xrange(n / 4 + 1):
-            size = read4(buffer)
-            if size:
-                size = min(size, n-read_bytes)
-                buf[read_bytes:read_bytes+size] = buffer[:size]
-                read_bytes += size
-            else:
-                break
-        return read_bytes
-    
-def read4(buf):
-    global file_content
-i = 0
-while i < len(file_content) and i < 4:
-    buf[i] = file_content[i]
-    i += 1
-
-if len(file_content) > 4:
-    file_content = file_content[4:]
-else:
-    file_content = ""
-return i
+        idx = 0
+        remain = n
+        while n > 0:
+            buf4 = [""]*4
+            tmp = read4(buf4)
+            for i in range(min(tmp, remain)):
+                buf[idx] = buf4[i]
+                remain -= 1
+                idx += 1
+            if tmp < 4:
+                return idx
+        return n
