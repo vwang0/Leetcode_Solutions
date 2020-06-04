@@ -94,3 +94,19 @@ INNER JOIN Weather AS w ON c.country_id = w.country_id
 WHERE w.day BETWEEN '2019-11-01' AND '2019-11-30'
 GROUP BY c.country_id
 ;
+
+
+SELECT country_name,
+       CASE
+           WHEN avg_weth<=15 THEN 'Cold'
+           WHEN avg_weth >=25 THEN 'Hot'
+           ELSE 'Warm'
+       END AS weather_type
+FROM
+    ( SELECT country_id,
+             AVG(weather_state) AS avg_weth
+     FROM Weather
+     WHERE day BETWEEN '2019-11-01' AND '2019-11-30'
+     GROUP BY country_id ) tmp
+JOIN Countries C ON tmp.country_id = C.country_id
+;
