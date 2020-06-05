@@ -13,7 +13,7 @@ Output:
 ]
 '''
 class Solution:
-    def permuteUnique(self, nums: List[int]) -> List[List[int]]:
+    def permuteUnique(self, nums: List[int]):
         if len(nums) ==: return [[]]
         res = [[]]
         for n in nums:
