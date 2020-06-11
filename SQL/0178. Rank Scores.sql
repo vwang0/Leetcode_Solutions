@@ -26,7 +26,10 @@ For example, given the above Scores table, your query should generate the follow
 +-------+------+
 */
 -- DENSE_RANK is not supported on leetcode due to the below 8.0 MySQL version.
-SELECT Score, DENSE_RANK() OVER (ORDER BY Score DESC) AS Rank FROM Scores
+SELECT Score,
+       DENSE_RANK() OVER (
+                          ORDER BY Score DESC) AS Rank
+FROM Scores
 
 -- not using window function
 SELECT S1.Score, COUNT(DISTINCT S2.Score) Rank
