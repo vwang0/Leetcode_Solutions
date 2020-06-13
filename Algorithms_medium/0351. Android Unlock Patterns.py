@@ -73,3 +73,24 @@ class Solution:
             visited[x]=False
             return res
         return sum(dfs(i,1) for i in range(1,10))
+
+
+
+class Solution:
+    def numberOfPatterns(self, m: int, n: int) -> int:
+        memo = [[0 for _ in range(10)] for _ in range(10)]
+        memo[1][3] = memo[3][1] = 2
+        memo[1][9] = memo[9][1] = memo[3][7] = memo[7][3] = memo[2][8] = memo[8][2] = memo[4][6] = memo[6][4] = 5
+        memo[1][7] = memo[7][1] = 4
+        memo[7][9] = memo[9][7] = 8
+        memo[3][9] = memo[9][3] = 6
+        
+        def helper(path, level):
+            if level > n:
+                return 0
+            temp = 0 if level < m else 1
+            for i in range(1,10):
+                if i not in path and (not memo[path[-1]][i] or memo[path[-1]][i] in path):
+                    temp += helper(path + [i], level + 1)
+            return temp
+        return helper([1], 1) * 4 + helper([2], 1) * 4 + helper([5], 1)        
