@@ -69,29 +69,31 @@ It is guaranteed that in a given test case the same buffer buf is called by read
 # def read4(buf: List[str]) -> int:
 
 class Solution:
-    def read(self, buf: List[str], n: int):
+    def __init__(self):
+        self.storage = []
+        
+    def read(self, buf, n):
         """
         :type buf: Destination buffer (List[str])
         :type n: Number of characters to read (int)
         :rtype: The number of actual characters read (int)
         """
-        buf4=['','','','']
-        if n<=len(self.mem):
-            buf[:n]=self.mem[:n]
-            self.mem=self.mem[n:]
-            return n
-        else:
-            cnt=len(self.mem)
-            buf[:cnt]=self.mem[:cnt]
-            while cnt<n:
-                read=read4(buf4)
-                buf[cnt:cnt+read]=buf4
-                cnt+=read
-                if read<4:
-                    break
-            if cnt<=n:
-                self.mem=[]
-                return cnt
-            else:
-                self.mem=buf[n:cnt]
-                return n           
+        cnt = 0
+        while self.storage and n > 0:
+            copy = min(n, len(self.storage))
+            buf[:copy] = self.storage[:copy]
+            self.storage = self.storage[copy:]
+            cnt += copy
+            n -= copy
+            
+        tmp = ['']*4
+        while n > 0:
+            size = read4(tmp)
+            copy = min(n, size)
+            buf[cnt:cnt+copy] = tmp[:copy]
+            cnt += copy
+            n -= copy
+            self.storage = tmp[copy:size]
+            if size < 4:
+                break
+        return cnt
