@@ -22,14 +22,14 @@ This is a follow up problem to H-Index, where citations is now guaranteed to be 
 Could you solve it in logarithmic time complexity?
 """
 class Solution:
-    def hIndex(self, citations: List[int]) -> int:
+    def hIndex(self, citations: List[int]):
         n = len(citations)
         if n == 0:
             return 0
         i = 0
         j = n-1
         while i < j:
-            mid = (i+j) / 2
+            mid = (i+j) // 2
             if citations[mid] == n-mid:
                 return n-mid
             elif citations[mid] < n-mid:
