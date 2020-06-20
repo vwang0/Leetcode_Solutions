@@ -113,6 +113,19 @@ ORDER BY student_id,
          subject_name
 ;
 
+SELECT a.student_id,
+       a.student_name,
+       c.subject_name,
+       count(b.subject_name) as attended_exams
+FROM Students a
+LEFT JOIN Examinations b
+JOIN Subjects c ON a.student_id=b.student_id
+AND c.subject_name=b.subject_name
+GROUP BY student_id,
+         subject_name
+ORDER BY a.student_id,
+         c.subject_name
+
 
 SELECT a.student_id, 
        a.student_name, 

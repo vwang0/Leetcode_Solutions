@@ -65,6 +65,16 @@ GROUP  BY a.sub_id
 ORDER  BY NULL 
 ;
 
+with temp as
+       (select number, row_number() over (
+                                          order by number) row_no, number-row_no delta
+        from numbers)
+select min(number)
+start, max(number) end
+from temp
+group by delta
+order by min(number)
+
 
 SELECT s.sub_id AS post_id,
        (SELECT COUNT(DISTINCT(s1.sub_id))

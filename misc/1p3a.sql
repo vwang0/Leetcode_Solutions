@@ -16,6 +16,22 @@ counts
 3
 */
 
+SELECT a.*
+FROM contacts a
+     JOIN (
+          SELECT username,
+               email,
+               COUNT(*)
+          FROM contacts b
+          GROUP BY username,
+               email
+          HAVING COUNT(*) > 1
+     ) temp ON a.username = temp.username
+     AND a.email = temp.email
+ORDER BY a.username,
+     a.email
+;
+
 /*
 Q1:*/
 SELECT a.COUNT(DISTINCT member_id)
