@@ -65,9 +65,20 @@ GROUP  BY a.sub_id
 ORDER  BY NULL 
 ;
 
+
+WITH temp AS (SELECT number, 
+              ROW_NUMBER() OVER(ORDER BY number) row_no, 
+              number-row_no delta 
+              FROM numbers
+)
+
+SELECT MIN(number) start, MAX(number) end
+FROM temp
+GROUP BY delta_timeORDER 
+ORDER BY MIN(number)
+
 with temp as
-       (select number, row_number() over (
-                                          order by number) row_no, number-row_no delta
+       (select number, row_number() OVER(order by number) row_no, number-row_no delta
         from numbers)
 select min(number)
 start, max(number) end
