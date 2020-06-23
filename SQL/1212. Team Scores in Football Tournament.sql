@@ -95,3 +95,28 @@ or Teams.team_id = Matches.guest_team
 group by Teams.team_id
 order by num_points desc,
          Teams.team_id asc
+;         
+
+
+-- Write your MySQL query statement below
+With team_pnts AS (
+
+SELECT host_team team_id, CASE WHEN host_goals>guest_goals THEN 3
+                     WHEN host_goals=guest_goals THEN 1
+                     WHEN host_goals<guest_goals THEN 0 END points
+FROM Matches
+    
+UNION ALL                    
+
+SELECT guest_team team_id, CASE WHEN guest_goals>host_goals THEN 3
+                     WHEN guest_goals=host_goals THEN 1
+                     WHEN guest_goals<host_goals THEN 0 END points
+FROM Matches
+)
+
+SELECT t.team_id, t.team_name, IF(SUM(points) IS NOT NULL, SUM(points), 0) num_points
+FROM Teams t
+LEFT JOIN team_pnts tp
+ON t.team_id = tp.team_id
+GROUP BY 1,2
+ORDER BY 3 DESC, 1
