@@ -23,15 +23,11 @@ class MyHashMap:
         else:
             return self.data[key]
         
-        
-
     def remove(self, key: int) :
         """
         Removes the mapping of the specified value key if this map contains a mapping for the key
         """
         self.data[key] = None
-        
-
 
 # Your MyHashMap object will be instantiated and called as such:
 # obj = MyHashMap()
