@@ -21,26 +21,30 @@ logger.shouldPrintMessage(10,"foo"); returns false;
 // logging string "foo" at timestamp 11
 logger.shouldPrintMessage(11,"foo"); returns true;
 """
-from collections import defaultdict
-class Logger(object):
-    timeStoreLen = 10
+class Logger:
+    
 
     def __init__(self):
-        self.timeToMessages = defaultdict(set) 
-    
-    def shouldPrintMessage(self, timestamp, message):
-        oldTimes = list( self.timeToMessages.keys() )
-        # remove timestamps whare are too old
+        """
+        Initialize your data structure here.
+        """
+        self.timeToMessages = defaultdict(set)
+        
+    def shouldPrintMessage(self, timestamp: int, message: str) -> bool:
+        """
+        Returns true if the message should be printed in the given timestamp, otherwise returns false.
+        If this method returns false, the message will not be printed.
+        The timestamp is in seconds granularity.
+        """
+        timeStoreLen = 10
+        oldTimes = list(self.timeToMessages.keys())
         for oldTime in oldTimes:
-            if timestamp - oldTime >= self.timeStoreLen:
-                del self.timeToMessages[ oldTime ]
-
-        # printed same message recently?
+            if timestamp - oldTime >= timeStoreLen:
+                del self.timeToMessages[oldTime]
         for oldTime in self.timeToMessages:
             if message in self.timeToMessages[oldTime]:
                 return False
-
-        self.timeToMessages[ timestamp ].add( message )
+        self.timeToMessages[timestamp].add(message)
         return True
 
 # Your Logger object will be instantiated and called as such:
