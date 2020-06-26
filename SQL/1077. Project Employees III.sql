@@ -58,7 +58,7 @@ Result table:
 Both employees with id 1 and 3 have the most experience among the employees of the first project. For the second project, the employee with id 1 has the most experience.
 */
 
-SELECT project_id, p1.employment_id
+SELECT project_id, p1.employee_id
 FROM Project AS p1
 INNER JOIN  Employee AS e1
 ON p1.employee_id = e1.employee_id
