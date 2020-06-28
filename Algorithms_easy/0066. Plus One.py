@@ -22,3 +22,9 @@ class Solution(object):
     def plusOne(self, digits):
         num = int("".join(map(str, digits))) + 1
         return [int(i) for i in str(num)]
+
+
+class Solution:
+    def plusOne(self, digits: List[int]) -> List[int]:
+        plus1 = int(''.join([str(i) for i in digits]))+1
+        return [i for i in str(plus1)]        

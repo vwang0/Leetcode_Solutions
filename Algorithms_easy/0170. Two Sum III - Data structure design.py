@@ -17,19 +17,40 @@ find(3) -> true
 find(6) -> false
 """
 
-class TwoSum(object):
- 
+class TwoSum:    
     def __init__(self):
+        """
+        Initialize your data structure here.
+        """
         self.nums = []
-        self.sums = {}
-
-    def add(self, number):
-        for i in self.nums:
-            self.sums[i + number] = 1
+        self.is_sorted = False
+        
+    def add(self, number: int) -> None:
+        """
+        Add the number to an internal data structure..
+        """
         self.nums.append(number)
+        self.is_sorted = False
 
-    def find(self, value):
-        return value in self.sums
+    def find(self, value: int) -> bool:
+        """
+        Find if there exists any pair of numbers which sum is equal to the value.
+        """
+        if not self.is_sorted:
+            self.nums.sort()
+        dict1 = {}
+        for i, num in enumerate(self.nums):
+            if value - num in dict1.keys():
+                return True
+            else:
+                dict1[num] = i
+        
+
+
+# Your TwoSum object will be instantiated and called as such:
+# obj = TwoSum()
+# obj.add(number)
+# param_2 = obj.find(value)
 
         
 
