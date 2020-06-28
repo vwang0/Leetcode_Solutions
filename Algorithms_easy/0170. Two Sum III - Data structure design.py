@@ -25,14 +25,14 @@ class TwoSum:
         self.nums = []
         self.is_sorted = False
         
-    def add(self, number: int) -> None:
+    def add(self, number: int) :
         """
         Add the number to an internal data structure..
         """
         self.nums.append(number)
         self.is_sorted = False
 
-    def find(self, value: int) -> bool:
+    def find(self, value: int) :
         """
         Find if there exists any pair of numbers which sum is equal to the value.
         """
