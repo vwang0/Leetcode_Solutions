@@ -57,16 +57,20 @@ Explanation: One 1 at depth 1, one 4 at depth 2, and one 6 at depth 3; 1 + 4*2 +
 #        Return None if this NestedInteger holds a single integer
 #        :rtype List[NestedInteger]
 #        """
-class Solution(object):
-    def depthSum(self, nestedList, currLevel=1):
-        """
-        :type nestedList: List[NestedInteger]
-        :rtype: int
-        """
-        sum = 0 
-        for element in nestedList:
-            if element.isInteger():
-                sum += currLevel * element.getInteger()
-            else:
-                sum += self.depthSum(element.getList(), currLevel = currLevel +1)
-        return sum
+class Solution:
+    def depthSum(self, nestedList: List[NestedInteger]) -> int:
+        
+        def solve(nested, lvl):
+            if nested.isInteger():
+                return lvl*nested.getInteger()
+            res = 0
+            ll = nested.getList()
+            for item in ll:
+                res+=solve(item, lvl+1)
+            return res
+    
+        
+        ans = 0
+        for item in nestedList:
+            ans+=solve(item, 1)
+        return ans
