@@ -25,6 +25,7 @@ class Solution:
         if n == 1: return 1
         i = 1
         while i <= n:
-            n, i = n-i, i+1
+            n = n-i
+            i += 1
         return i-1
         
