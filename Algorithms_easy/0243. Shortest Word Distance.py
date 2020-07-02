@@ -25,3 +25,19 @@ class Solution():
             if idx1 != -1 and idx2 != -1:
                 minDiff = min(minDiff, abs(idx1 - idx2))
         return minDiff
+
+
+class Solution():
+    def shortestDistance(words, word1, word2):
+        idx1=idx2=-1
+        ans = float('inf')
+        
+        for i, w in enumerate(words):
+            if w == word1:
+                idx1 =i
+            elif w == word2:
+                idx2 = i
+            if idx1 != -1 and idx2 != -1:
+                temp = abs(idx1-idx2)
+                ans = min(ans, temp)
+        return ans
