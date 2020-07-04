@@ -15,7 +15,7 @@ Note:
 n does not exceed 1690.
 """
 class Solution:
-    def nthUglyNumber(self, n: int) -> int:
+    def nthUglyNumber(self, n: int) :
         ugly = [1]
         i2, i3, i5 = 0, 0, 0
         while n > 1:
@@ -32,7 +32,7 @@ class Solution:
         return ugly[-1]
 
 class Solution:
-    def nthUglyNumber(self, n: int) -> int:
+    def nthUglyNumber(self, n: int) :
         minx = 1
         n = n - 1
         
