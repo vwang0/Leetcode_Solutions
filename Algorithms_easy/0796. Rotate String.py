@@ -40,7 +40,6 @@ class Solution:
             return False
 
 
-
 class Solution:
     def rotateString(self, A: str, B: str):
         return (len(A) == len(B)) and (B in A*2)
