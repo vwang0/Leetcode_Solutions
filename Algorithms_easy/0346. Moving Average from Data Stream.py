@@ -10,36 +10,24 @@ m.next(10) = (1 + 10) / 2
 m.next(3) = (1 + 10 + 3) / 3
 m.next(5) = (10 + 3 + 5) / 3
 """
-class MovingAverage(object):
-    def __init__(self, size):
+class MovingAverage:    
+    def __init__(self, size: int):
         """
         Initialize your data structure here.
-        :type size: int
         """
-        from collections import deque
-
         self.size = size
         self.windowLen = 0
         self.windowSum = 0
         self.windowQue = deque()
 
-    def next(self, val):
-        """
-        :type val: int
-        :rtype: float
-        """
+    def next(self, val: int) :
         self.windowLen += 1
-        self.windowQue.append( val )
         self.windowSum += val
-
+        self.windowQue.append(val)
         if self.windowLen > self.size:
             self.windowLen -= 1
             self.windowSum -= self.windowQue.popleft()
-
-        return float(self.windowSum) / float(self.windowLen)
-
-
-
+        return float(self.windowSum/self.windowLen)
 
 # Your MovingAverage object will be instantiated and called as such:
 # obj = MovingAverage(size)
