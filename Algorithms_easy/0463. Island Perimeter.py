@@ -22,17 +22,17 @@ Explanation: The perimeter is the 16 yellow stripes in the image below:
 
 """
 class Solution:
-    def islandPerimeter(self, grid: List[List[int]]):
+    def islandPerimeter(self, grid: List[List[int]]) -> int:
         res = 0
         for row in range(len(grid)):
             for column in range(len(grid[0])):
-                if grid[row][colmn]: 
+                if grid[row][column] == 1: 
                     res += 4
-                    if row and grid[row-1][column]:
+                    if row>0 and grid[row-1][column] == 1:
                         res -= 2
-                    if column and grid[row][column-1]:
+                    if column>0 and grid[row][column-1] == 1:
                         res -= 2 
-        return res
+        return res     
 
 
 
