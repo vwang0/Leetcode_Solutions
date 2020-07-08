@@ -20,6 +20,8 @@ class Solution:
     def threeSum(self, nums: List[int]) :
         res = []
         nums.sort()
+        if not nums or len(nums)<3:
+            return []        
         for i in range(len(nums)):
             if nums[i]>0:
                 break
