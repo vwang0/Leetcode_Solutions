@@ -84,6 +84,8 @@ celerybeat-schedule
 # Environments
 .env
 .venv
+.metals
+.vscode
 env/
 venv/
 ENV/
