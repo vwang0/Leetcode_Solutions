@@ -1,7 +1,0 @@
-{
-    "python.linting.pylintEnabled": true,
-    "python.linting.enabled": true,
-    "python.pythonPath": "C:\\Users\\Vin\\Anaconda3\\python.exe",
-    "python.formatting.provider": "black",
-    // "python.formatting.provider": "black"
-}
