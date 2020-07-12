@@ -15,11 +15,14 @@ In Java, the compiler represents the signed integers using 2's complement notati
  
 """
 class Solution:
-    # @param n, an integer
-    # @return an integer
-    def reverseBits(self, n):
-        ans = 0
+    def reverseBits(self, n: int) -> int:
+        res = 0
         for i in range(32):
-            ans = (ans << 1) + (n & 1)
-            n >>= 1
-        return ans        
+            res = (res << 1) + (n & 1)
+            n = n >> 1
+        return res
+
+
+class Solution:
+    def reverseBits(self, n: int) -> int:
+        return int((format(n, '#034b')[2:])[::-1], 2)
