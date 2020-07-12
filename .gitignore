@@ -69,7 +69,9 @@ docs/_build/
 # PyBuilder
 target/
 
-.ipynb_checkpoints
+/.ipynb_checkpoints
+/bkup
+
 
 # pyenv
 .python-version
