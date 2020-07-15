@@ -41,7 +41,13 @@ p1 = 1 and p2 = 2, has an area equal to |2-4| * |8-7| = 2.
 p1 = 2 and p2 = 3, has an area equal to |4-2| * |7-10| = 6.
 p1 = 1 and p2 = 3 It's not possible because the rectangle has an area equal to 0.
 */
-SELECT tab1.id AS p1, tab2.id AS p2
+SELECT tab1.id AS p1,
+       tab2.id AS p2,
+       ABS((tab1.x_value - tab2.x_value)* (tab1.y_value - tab2.y_value)) AS area
 FROM Points AS tab1
-JOIN Points AS tab2
-WHERE 
+JOIN Points AS tab2 ON tab1.id < tab2.id
+AND tab1.x_value <> tab2.x_value
+AND tab1.y_value <> tab2.y_value
+ORDER BY area DESC,
+         p1,
+         p2
