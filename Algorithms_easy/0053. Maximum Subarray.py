@@ -17,7 +17,6 @@ class Solution(object):
     def maxSubArray(self, nums):
         if not nums:
             return 0
-
         cumSum = maxSum = nums[0]
         for num in nums[1:]:
             cumSum = max(num, cumSum + num)
@@ -34,3 +33,11 @@ class Solution:
             sm += num
             mx, mn = max(mx, sm-mn), min(mn,sm)
         return mx
+
+class Solution:
+    def maxSubArray(self, nums: List[int]) -> int:
+        max_curr = max_glb = nums[0]
+        for i in range(1,len(nums)):
+            max_curr = max(nums[i], max_curr+nums[i])
+            max_glb = max(max_glb, max_curr)
+        return max_glb
