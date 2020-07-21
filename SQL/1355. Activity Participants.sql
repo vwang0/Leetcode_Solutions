@@ -63,3 +63,18 @@ Horse Riding activity is performed by 1 friend, minimum number of participants, 
 Singing is performed by 2 friends (Victor J. and Jade W.)
 */
 
+SELECT activity
+FROM Friends
+GROUP BY activity
+HAVING COUNT(*) !=
+    (SELECT COUNT(*)
+     FROM Friends
+     GROUP BY activity
+     ORDER BY 1
+     LIMIT 1)
+AND COUNT(*) !=
+    (SELECT COUNT(*)
+     FROM Friends
+     GROUP BY activity
+     ORDER BY 1 DESC
+     LIMIT 1)
