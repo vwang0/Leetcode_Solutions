@@ -33,7 +33,7 @@ Explanation: There is no path in the binary tree that contains all the elements 
 #         self.left = left
 #         self.right = right
 class Solution:
-    def isSubPath(self, head: ListNode, root: TreeNode) -> bool:
+    def isSubPath(self, head: ListNode, root: TreeNode):
         target = ""
         while head:
             target = target + str(head.val)
