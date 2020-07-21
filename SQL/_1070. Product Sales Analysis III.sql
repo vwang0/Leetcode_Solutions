@@ -55,6 +55,10 @@ Result table:
 | 200        | 2011       | 15       | 9000  |
 +------------+------------+----------+-------+
 */
-SELECT product_id, MIN(year) AS first_year, quantity, price
+SELECT product_id, year AS first_year, quantity, price
 FROM Sales 
-GROUP BY S.product_id
+WHERE (product_id, year) IN
+        (SELECT product_id,
+                MIN(year) 
+         FROM Sales
+         GROUP BY product_id)
