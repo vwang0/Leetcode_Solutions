@@ -74,29 +74,50 @@ Page 77 is suggested from both user 2 and user 3.
 Page 88 is not suggested because user 1 already likes it.
 */
 
-SELECT
-  DISTINCT page_id AS recommended_page
-FROM Likes AS L
-LEFT JOIN Friendship AS F ON F.user2_id = L.user_id
-WHERE
-  user1_id in (
-    select
-      user2_id 
-    from Friendship
-    where
-      user1_id = 1
-    union
-    select
-      user1_id 
-    from Friendship
-    where
-      user2_id = 1
-  )
+SELECT DISTINCT page_id recommended_page
+FROM likes
+WHERE user_id IN (
+        SELECT DISTINCT user2_id
+    FROM friendship
+    WHERE user1_id = 1
+
+  UNION
+
+    SELECT DISTINCT user1_id
+    FROM friendship
+    WHERE user2_id = 1)
   AND page_id NOT IN (
-    SELECT
-      page_id
+        SELECT page_id
+  FROM likes
+  WHERE user_id = 1
+    )
+    ;
+
+
+
+
+-- 
+-- Below is NOT correct!!
+-- 
+SELECT DISTINCT page_id AS recommended_page
+FROM Likes AS L
+LEFT JOIN Friendship AS F 
+ON F.user2_id = L.user_id
+WHERE user1_id IN (    
+    SELECT user2_id 
+    FROM Friendship
+    WHERE user1_id = 1
+    
+    UNION
+    
+    SELECT user1_id 
+    FROM Friendship
+    WHERE user2_id = 1
+    )
+  
+  AND page_id NOT IN (
+    SELECT page_id
     FROM Likes
-    WHERE
-      user1_id = 1
-  )
+    WHERE user1_id = 1
+      )
 
