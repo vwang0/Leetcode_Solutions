@@ -67,3 +67,18 @@ Result table:
 | 2         | 35         |
 | 3         | 40         |
 */
+WITH P1 AS (SELECT player_id, group_id, 
+            SUM(CASE WHEN player_id = first_player THEN first_score
+                     WHEN player_id = second_player THEN second_score
+                     ELSE 0 END) AS total
+            FROM Players p
+            LEFT JOIN Matches m
+            ON p.player_id = m.first_player OR p.player_id = m.second_player
+            GROUP BY player_id),
+
+     P2 AS (SELECT *, ROW_NUMBER() OVER(PARTITION BY group_id ORDER BY total DESC, player_id) AS total_rank
+            FROM P1)
+
+SELECT group_id, player_id
+FROM P2
+WHERE total_rank = 1;

@@ -67,3 +67,30 @@ From 2019-01-01 to 2019-01-03 all tasks succeeded and the system state was "succ
 From 2019-01-04 to 2019-01-05 all tasks failed and system state was "failed".
 From 2019-01-06 to 2019-01-06 all tasks succeeded and system state was "succeeded".
 */
+    (SELECT
+        'failed' period_state,
+        MIN(day) start_date,
+        MAX(day) end_date
+    FROM (
+    SELECT fail_date day,
+            datediff(fail_date,'2011-1-1') - RANK() OVER(ORDER BY fail_date) flag
+        FROM Failed
+        WHERE year(fail_date)=2019
+) t1
+    GROUP BY flag)
+
+UNION
+
+    (SELECT
+        'succeeded' period_state,
+        MIN(day) start_date,
+        MAX(day) end_date
+    FROM (
+    SELECT success_date day,
+            datediff(success_date,'2011-01-01') - RANK() OVER(ORDER BY success_date) flag
+        FROM Succeeded
+        WHERE year(success_date)=2019
+) t2
+    GROUP BY flag
+)
+ORDER BY start_date
