@@ -23,3 +23,21 @@ class Solution:
             if dict_num[key] == 1:
                 res.append(key)
         return res
+
+
+class Solution:
+    def singleNumber(self, nums: int):
+        cnt = collections.Counter(nums)
+        return [x for x in cnt if cnt[x] == 1]
+
+
+class Solution:
+    def singleNumber(self, nums: List[int]):
+        cnt = collections.defaultdict(int)
+        res = []
+        for num in nums:
+            cnt[num] += 1
+        for key in cnt:
+            if cnt[key] == 1:
+                res.append(key)
+        return res
