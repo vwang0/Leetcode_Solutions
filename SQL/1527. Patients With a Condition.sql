@@ -1,4 +1,4 @@
-"""
+/*
 1527. Patients With a Condition
 Table: Patients
 
@@ -41,8 +41,8 @@ Result table:
 | 4          | George       | ACNE DIAB100 | 
 +------------+--------------+--------------+
 Bob and George both have a condition that starts with DIAB1.
-"""
-# Write your MySQL query statement below
+*/
+-- Write your MySQL query statement below
 
 SELECT * FROM Patients
 WHERE conditions REGEXP 'DIAB1'
