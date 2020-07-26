@@ -13,6 +13,6 @@ Could you do it without any loop/recursion in O(1) runtime?
 """
 class Solution:
     def addDigits(self, num: int) -> int:
-        if num <= 0:
+        if num == 0:
             return 0
         return ((num-1) % 9 +1)
