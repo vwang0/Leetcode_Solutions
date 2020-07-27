@@ -48,13 +48,12 @@ Result table:
 Note that we only care about dates with non zero user count.
 The user with id 5 first logged in on 2019-03-01 so he's not counted on 2019-06-21.
 */
-
-SELECT login_date, COUNT(DISTINCT user_id)
+SELECT login_date, COUNT(DISTINCT user_id) AS user_count
 FROM (
     SELECT user_id, MIN(activity_date) AS login_date
     FROM traffic
     WHERE activity = 'login'
     GROUP BY user_id
-)
+) temp
 WHERE DATEDIFF('2019-06-30', login_date) <= 90
 GROUP BY login_date
