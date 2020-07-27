@@ -42,16 +42,23 @@ Result table:
 +------+
 */
 
-SELECT viewer_id AS id
-FROM (
-    SELECT viewer_id,
-      COUNT(DISTINCT article_id) AS cnt
-   FROM Views
-   GROUP BY viewer_id, view_date
-) temp
-WHERE cnt > 1
+SELECT DISTINCT viewer_id AS id
+FROM views
+GROUP BY view_date,viewer_id
+HAVING COUNT(DISTINCT article_id) > 1
 ORDER BY viewer_id
 ;
+
+-- SELECT viewer_id AS id
+-- FROM (
+--     SELECT viewer_id,
+--       COUNT(DISTINCT article_id) AS cnt
+--    FROM Views
+--    GROUP BY viewer_id, view_date
+-- ) temp
+-- WHERE cnt > 1
+-- ORDER BY viewer_id
+-- ;
 
 -- Wrong answer!
 -- SELECT viewer_id AS id

@@ -47,3 +47,20 @@ The customer id 3 has a first order with delivery id 5 and it is scheduled.
 The customer id 4 has a first order with delivery id 7 and it is immediate.
 Hence, half the customers have immediate first orders.
 */
+
+SELECT ROUND(SUM(r=order_date AND if_imme = "yes")*100/COUNT(DISTINCT customer_id),2) AS immediate_percentage
+FROM(
+SELECT *, MIN(order_date) OVER(PARTITION BY customer_id)r,
+        CASE WHEN order_date=customer_pref_delivery_date THEN "yes" ELSE "no" END AS if_imme
+    FROM Delivery
+    ) temp
+;
+
+
+SELECT round(sum(CASE WHEN (order_date = customer_pref_delivery_date and rnk = 1) THEN 1 ELSE 0 END)
+/sum(CASE WHEN rnk = 1 THEN 1 ELSE 0 END) * 100,2) AS immediate_percentage
+from (
+select * , rank() over (partition by customer_id order by order_date) as rnk
+    from delivery
+ ) temp
+;

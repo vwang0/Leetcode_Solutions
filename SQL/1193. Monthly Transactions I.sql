@@ -53,3 +53,4 @@ SELECT
 FROM Transactions
 GROUP BY 1, 2
 
+;
