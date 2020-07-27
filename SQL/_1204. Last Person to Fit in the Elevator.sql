@@ -36,13 +36,13 @@ Queue table is ordered by turn in the example for simplicity.
 In the example George Washington(id 5), John Adams(id 3) and Thomas Jefferson(id 6) will enter the elevator as their weight sum is 250 + 350 + 400 = 1000.
 Thomas Jefferson(id 6) is the last person to fit in the elevator because he has the last turn in these three people.
 */
-SELECT person_id
-FROM (
-    SELECT person_id, SUM(weight) OVER (ORDER BY turn) AS total_weight
-    FROM Queue 
-    WHERE total_weight <= 1000
-    )
-HAVING total_weight = MAX(total_weight)
+SELECT b.book_id, b.name
+FROM Books b 
+LEFT JOIN Orders o
+ON b.book_id = o.book_id
+WHERE b.available_from < DATE_SUB("2019-06-23", INTERVAL 1 MONTH)
+GROUP BY b.book_id
+HAVING IFNULl(SUM(IF(o.dispatch_date BETWEEN DATE_SUB("2019-06-23", INTERVAL 1 YEAR) AND "2019-06-23",  quantity, 0)), 0) < 10;
 
 
 
