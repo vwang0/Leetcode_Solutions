@@ -43,6 +43,8 @@ class Solution(object):
                     return False
         return True
 
+
+
 class Solution:
     def isAlienSorted(self, words, order):
         alien_dic = {}
