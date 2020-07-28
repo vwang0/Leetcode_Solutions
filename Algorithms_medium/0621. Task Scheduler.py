@@ -46,30 +46,24 @@ class Solution:
         found_most = sum([freq[key] == most_freq for key in freq])
         return max(len(tasks), (most_freq-1)*(n+1)+found_most)
 
-# ========= not correct!
-# class Solution:
-#     def leastInterval(self, tasks: List[str], n: int) :
-#         length = len(tasks)
-#         if length<=1: return length
-#         task_map = dict()
-#         for task in task_map:
-#             task_map[task] = task_map.get(task,0)+1
-#         task_sort = sorted(task_map.items(), key=lambda x: x[1], reverse=True)
-#         max_task_count = task_sort[0][1]
-#         res = (max_task_count - 1) * (n + 1)
-#         for sort in task_sort:
-#             if sort[1] == max_task_count:
-#                 res += 1
-#         return res if res >= length else length
+class Solution:
+    def leastInterval(self, tasks: List[str], n: int) :
+        task_map = Counter(tasks)
+        task_sort = task_map.most_common()
+        max_task_count = task_sort[0][1]
+        res = (max_task_count - 1) * (n + 1)
+        for sort in task_sort:
+            if sort[1] == max_task_count:
+                res += 1
+        return res if res >= len(tasks) else len(tasks)
 
-# ========= not correct!
-# class Solution:
-#     def leastInterval(self, tasks: List[str], n: int):
-#         n, c = len(tasks), Counter(tasks)
-#         most = c.most_common()
-#         first_freq, cnt = most[0][1], 0
-#         for i in range(1, len(most)):
-#             if most[i][1] == first_freq:
-#                 cnt += 1
-#         res = (first_freq - 1) * (n + 1) + cnt
-#         return res if res>=n else n
+class Solution:
+    def leastInterval(self, tasks: List[str], n: int) :
+        c = Counter(tasks)
+        most = c.most_common()
+        most_freq, cnt = most[0][1], 0
+        for itm in most:
+            if itm[1] == most_freq:
+                cnt += 1
+        res = (most_freq - 1) * (n + 1) + cnt
+        return res if res >= len(tasks) else len(tasks)
