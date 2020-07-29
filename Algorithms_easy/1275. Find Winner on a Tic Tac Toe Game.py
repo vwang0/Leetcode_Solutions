@@ -16,7 +16,6 @@ Return the winner of the game if it exists (A or B), in case the game ends in a 
 
 You can assume that moves is valid (It follows the rules of Tic-Tac-Toe), the grid is initially empty and A will play first.
 
- 
 
 Example 1:
 
