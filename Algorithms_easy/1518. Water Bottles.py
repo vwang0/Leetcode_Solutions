@@ -36,7 +36,6 @@ Output: 2
 class Solution:
     def numWaterBottles(self, numBottles: int, numExchange: int) :
         res = numBottles
-        carry = 0
         while numBottles >= numExchange:
             div, mod = divmod(numBottles, numExchange)
             res += div
