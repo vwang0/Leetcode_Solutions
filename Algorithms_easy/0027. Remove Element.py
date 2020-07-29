@@ -53,7 +53,7 @@ class Solution(object):
         for num in nums:
             if num != val:
                 nums[i] = num
-                i +=1
+                i += 1
         return i
 
 a = Solution()
