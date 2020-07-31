@@ -95,3 +95,24 @@ SELECT customer_name, customer_id, order_id, order_date
 FROM temp
 WHERE rnk <= 3
 ORDER BY customer_name, customer_id, order_date DESC
+
+
+------------- Nth recent orders
+CREATE FUNCTION getNthRecentOrders(N INT) RETURNS INT
+BEGIN
+    RETURN (
+        WITH temp AS (
+            SELECT name AS customer_name, O.customer_id, order_id, order_date,
+            RANK() OVER (PARTITION BY customer_id ORDER BY order_date DESC) AS rnk
+            FROM Orders O
+            JOIN Customers C  
+            ON O.customer_id = C .customer_id
+        )
+
+        SELECT customer_name, customer_id, order_id, order_date
+        FROM temp
+        WHERE rnk <= N
+        ORDER BY customer_name, customer_id, order_date DESC        
+        
+  );
+END
