@@ -28,8 +28,7 @@ Note: The input will be a non-empty word consisting of uppercase and lowercase l
 
 class Solution:
     def detectCapitalUse(self, word: str) :
-        if word.upper() == word or word.lower() == word or word.capitalize(
-        ) == word:
+        if word.upper() == word or word.lower() == word or word.capitalize() == word:
             return True
         return False
 
