@@ -97,7 +97,7 @@ WHERE rnk <= 3
 ORDER BY customer_name, customer_id, order_date DESC
 
 
-------------- Nth recent orders
+------------- Most recent N orders
 CREATE FUNCTION getNthRecentOrders(N INT) RETURNS INT
 BEGIN
     RETURN (
