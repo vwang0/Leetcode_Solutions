@@ -27,4 +27,17 @@ class Solution:
         for i in range(len(nums)):
             if nums[i] >= 0:
                 res.append(i+1)
-        return res           
+        return res
+
+
+class Solution:
+    def findDisappearedNumbers(self, nums: List[int]):
+        dic = {}
+        res = []
+        length = len(nums)
+        for num in nums:
+            dic[num] = 1
+        for i in range(1, length + 1):
+            if i not in dic:
+                res.append(i)
+        return res

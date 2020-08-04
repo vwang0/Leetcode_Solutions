@@ -12,12 +12,13 @@ You must do this in-place without making a copy of the array.
 Minimize the total number of operations.
 """
 class Solution:
-    def moveZeroes(self, nums: List[int]) -> None:
+    def moveZeroes(self, nums: List[int]):
         """
         Do not return anything, modify nums in-place instead.
         """
-        flag0 = 0
-        for i in range(len(nums)):
+        flag = 0
+        length = len(nums)
+        for i in range(length):
             if nums[i] != 0:
-                nums[i], nums[flag0] = nums[flag0], nums[i]
-                flag0 += 1
+                nums[flag], nums[i] = nums[i], nums[flag]
+                flag += 1
