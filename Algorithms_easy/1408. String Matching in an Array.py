@@ -35,6 +35,6 @@ class Solution:
         all_wds = ':'.join(words)
         res = []
         for wd in words:
-            if all_wds.count(wd) >1:
+            if all_wds.count(wd) > 1:
                 res.append(wd)
         return res
