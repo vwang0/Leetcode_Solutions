@@ -31,8 +31,6 @@ Constraints:
 2 <= nums.length <= 500
 0 <= nums[i] <= 100
 """
-
-
 class Solution:
     def smallerNumbersThanCurrent(self, nums: List[int]):
         dic = dict()
