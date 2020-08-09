@@ -39,4 +39,4 @@ class Solution:
             sumlist = [num + root.val for num in sumlist]
             return sumlist.count(sum) + dfs(root.left, sumlist) + dfs(root.right, sumlist)
         
-    return df(root, [])
+    return dfs(root, [])
