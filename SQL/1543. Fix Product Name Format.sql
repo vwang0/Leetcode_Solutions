@@ -55,7 +55,8 @@ In March, 1 matryoshka was sold.
 SELECT LOWER(TRIM(product_name)) PRODUCT_NAME, DATE_FORMAT(sale_date, '%Y-%m') SALE_DATE, COUNT(sale_id) TOTAL
 FROM Sales
 GROUP BY 1, 2
-ORDER BY 1, 2
+ORDER BY PRODUCT_NAME, SALE_DATE
 
 
--- Here you can only use 1 and 2 in order by and group by, because column names are same before and after.
+-- If you use GROUP BY product_name, sale_date, the records are grouped before product_name being trimmed and sale_date being formatted, which is wrong.
+-- You should use ' GROUP BY 1, 2', instead.

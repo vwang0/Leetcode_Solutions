@@ -13,12 +13,15 @@ The shortest distance is 1.00 from point (-1,-1) to (-1,2). So the output should
 | 1.00     |
  Note: The longest distance among all the points are less than 10000.
 */
+
+--- Solution 1
 SELECT ROUND(SQRT(MIN(POW(p1.x-p2.x,2)+POW(p1.y-p2.y,2))),2) AS shortest
 FROM point_2d AS  p1,
      point_2d AS  p2
 WHERE p1.x <> p2.x
     OR p1.y <> p2.y;
     
+--- Solution 2    
 SELECT ROUND(SQRT(MIN(POW(p1.x-p2.x,2) + POW(p1.y-p2.y,2))),2) shortest
 FROM point_2d AS p1
 CROSS JOIN point_2d AS p2
