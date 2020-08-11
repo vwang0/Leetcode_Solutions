@@ -124,7 +124,7 @@
 | 1532 | The Most Recent Three Orders                                 | Medium     |    x   |
 | 1543 | Fix Product Name Format                                      | Easy       |    x   |
 
-** SQL query order of execution **
+**SQL query order of execution**
 
 (8) SELECT (9) DISTINCT (11) <TOP_specification> <select_list>   
 (1) FROM <left_table>   
