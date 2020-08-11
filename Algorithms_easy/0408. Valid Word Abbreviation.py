@@ -1,4 +1,4 @@
-/*
+"""
 408. Valid Word Abbreviation
 Given a non-empty string s and an abbreviation abbr, return whether the string matches with the given abbreviation.
 A string such as "word" contains only the following valid abbreviations:
@@ -12,7 +12,7 @@ Return true.
 Example 2:
 Given s = "apple", abbr = "a2e":
 Return false.
-*/
+"""
 class Solution(object):
     def validWordAbbreviation(self, word, abbr):
         """

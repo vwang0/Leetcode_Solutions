@@ -1,4 +1,4 @@
-/*
+"""
 422. Valid Word Square
 Given a sequence of words, check whether it forms a valid word square.
 
@@ -65,7 +65,7 @@ Explanation:
 The third row reads "read" while the third column reads "lead".
 
 Therefore, it is NOT a valid word square.
-*/
+"""
 
   
 class Solution(object):
