@@ -15,9 +15,22 @@ The range of numbers in the array is [-1000, 1000] and the range of the integer 
 """
 class Solution:
     def subarraySum(self, nums: List[int], k: int) -> int:
-        count = 0 
+        count = 0
         check_sum = defaultdict(int)
         for acc in accumulate(nums, initial=0):
             count += check_sum[acc-k]
             check_sum[acc] += 1
-        return count        
+        return count
+
+
+class Solution:
+    def subarraySum(self, nums: List[int], k: int) -> int:
+        n = len(nums)
+        cnt = 0
+        total = {0: 1}
+        temp = 0
+        for i in range(n):
+            temp += nums[i]
+            cnt += total.get(temp - k, 0)
+            total[temp] = total.get(temp, 0) + 1
+        return cnt
