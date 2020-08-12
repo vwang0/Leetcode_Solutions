@@ -1,5 +1,5 @@
 """
-26. Remove Duplicates from Sorted Array
+0026. Remove Duplicates from Sorted Array
 Given a sorted array nums, remove the duplicates in-place 
 such that each element appear only once and return the new length.
 
