@@ -1,3 +1,3 @@
 
 
-#### Leetcode Algorithm - easy
+#### Leetcode Category - Algorithm - easy
