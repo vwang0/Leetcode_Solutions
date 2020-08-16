@@ -1,4 +1,7 @@
 
+#### Leetcode Category - SQL
+
+
 |   #  |                             Title                            | Difficulty | Status |
 |:----:|:------------------------------------------------------------:|:----------:|:------:|
 | 175  | Combine Two Tables                                           | Easy       |    x   |
