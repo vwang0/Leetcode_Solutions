@@ -1,3 +1,3 @@
 
 
-#### Leetcode Algorithm - medium
+#### Leetcode Category - Algorithm - medium
