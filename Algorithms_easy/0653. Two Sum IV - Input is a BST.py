@@ -37,7 +37,7 @@ Output: False
 #         self.left = left
 #         self.right = right
 class Solution:
-    def findTarget(self, root: TreeNode, k: int) -> bool:
+    def findTarget(self, root: TreeNode, k: int):
         if not root: return False
         bfs, s = [root], set()
         for i in bfs:
