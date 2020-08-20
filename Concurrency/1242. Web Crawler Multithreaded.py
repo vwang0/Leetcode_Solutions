@@ -25,18 +25,13 @@ Note that getUrls(String url) simulates performing a HTTP request. You can treat
 
 Below are two examples explaining the functionality of the problem, for custom testing purposes you'll have three variables urls, edges and startUrl. Notice that you will only have access to startUrl in your code, while urls and edges are not directly accessible to you in code.
 
- 
-
 Follow up:
 
 Assume we have 10,000 nodes and 1 billion URLs to crawl. We will deploy the same software onto each node. The software can know about all the nodes. We have to minimize communication between machines and make sure each node does equal amount of work. How would your web crawler design change?
 What if one node fails or does not work?
 How do you know when the crawler is done?
- 
 
 Example 1:
-
-
 
 Input:
 urls = [
@@ -55,8 +50,6 @@ Output: [
   "http://news.yahoo.com/us"
 ]
 Example 2:
-
-
 
 Input: 
 urls = [
