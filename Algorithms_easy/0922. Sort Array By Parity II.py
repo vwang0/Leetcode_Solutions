@@ -24,7 +24,12 @@ A.length % 2 == 0
 class Solution:
     def sortArrayByParityII(self, A: List[int]) :
         length = len(A)
-        for i in range(length-1):
-            if (i%2 == 0 and A[i]%2 != 0) or (i%2 == 1 and A[i]%2 != 1):
-                A[i], A[i+1] = A[i+1], A[i]
+        i, j = 0, 1
+        while i < length and j < length:
+            while i < length and A[i] % 2 == 0:
+                i += 2
+            while j < length and A[j] % 2 != 0:
+                j += 2
+            if i < length and j < length:
+                A[i], A[j] = A[j], A[i]
         return A
