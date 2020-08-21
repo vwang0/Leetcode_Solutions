@@ -76,6 +76,24 @@ Jonathan received $500 on "2020-08-02" and paid $200 on "2020-08-08", credit (20
 Winston received $400 on "2020-08-01" and paid $500 on "2020-08-03", credit (10000 +400 -500) = $9990
 Luis didn't received any transfer, credit = $800
 */
+SELECT user_id,
+       user_name,
+       (credit - IFNULL(out_cash, 0) + IFNULL(in_cash, 0)) AS credit,
+       IF((credit - IFNULL(out_cash, 0) + IFNULL(in_cash, 0)) < 0, 'Yes', 'No') AS credit_limit_breached
+FROM Users U
+LEFT JOIN
+    (SELECT paid_by,
+            SUM(amount) AS out_cash
+     FROM Transaction
+     GROUP BY paid_by) out_tmp
+ON U.user_id = out_tmp.paid_by
+LEFT JOIN
+    (SELECT paid_to,
+            SUM(amount) AS in_cash
+     FROM Transaction
+     GROUP BY paid_to) in_tmp 
+ON U.user_id = in_tmp.paid_to
+
 -- Solution 1
 SELECT U.user_id,
        user_name,
