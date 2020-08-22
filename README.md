@@ -1,7 +1,7 @@
 # Leetcode 
 
 ## Algorithms in Python | Database in MySQL
-https://leetcode.com/vwang0/
+
 
 |   #  |                                         Title                                         | Difficulty |
 |:----:|:-------------------------------------------------------------------------------------:|:----------:|
@@ -1536,3 +1536,5 @@ https://leetcode.com/vwang0/
 | 1529 | Bulb Switcher IV                                                                      | Medium     |
 | 1530 | Number of Good Leaf Nodes Pairs                                                       | Medium     |
 | 1531 | String Compression II                                                                 | Hard       |
+
+https://leetcode.com/vwang0/
