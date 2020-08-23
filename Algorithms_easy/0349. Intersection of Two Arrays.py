@@ -15,6 +15,21 @@ Note:
 Each element in the result must be unique.
 The result can be in any order.
 """
+
+
+class Solution:
+    def intersection(self, nums1: List[int], nums2: List[int]) -> List[int]:
+        res = []
+        hashmap = dict()
+        for num in nums1:
+            hashmap[num] = hashmap.get(num, 0) + 1
+        for j in nums2:
+            if j in hashmap and hashmap[j] > 0:
+                res.append(j)
+                hashmap[j] = 0
+        return res
+
+
 class Solution:
     def intersection(self, nums1: List[int], nums2: List[int]) -> List[int]:
         snum1 = set(nums1)
