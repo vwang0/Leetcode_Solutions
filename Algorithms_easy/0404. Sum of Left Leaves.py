@@ -29,3 +29,26 @@ class Solution(object):
             if u.right:
                 stack.append(u.right)
         return res
+
+
+# Sum of Right Leaves
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def sumOfLeftLeaves(self, root: TreeNode) -> int:
+        if not root: return 0
+        stack = [root]
+        res = 0
+        while stack:
+            u = stack.pop()
+            if u.right:
+                stack.append(u.right)
+                if not u.right.left and not u.right.right:
+                    res += u.right.val
+            if u.left:
+                stack.append(u.left)
+        return res
