@@ -36,8 +36,6 @@ n == grid[i].length
 -1000 <= grid[i][j] <= 1000
 0 <= k <= 100
 """
-
-
 class Solution:
     def shiftGrid(self, grid: List[List[int]], k: int) -> List[List[int]]:
         Grid = [i for j in grid for i in j]  # flatten a list of list
