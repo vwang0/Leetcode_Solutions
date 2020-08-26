@@ -33,7 +33,29 @@ Constraints:
 """
 class Solution:
     def oddCells(self, n: int, m: int, indices: List[List[int]]) -> int:
+        rows = [False] * n
+        cols = [False] * m
+        for r, c in indices:
+            rows[r] = not rows[r]
+            cols[c] = not cols[c]
+        rows_true = rows.count(True)
+        rows_false = n - rows_true
+        cols_true = cols.count(True)
+        cols_false = m - cols_true
+        return rows_true * cols_false + rows_false * cols_true
+
+
+class Solution:
+    def oddCells(self, n: int, m: int, indices: List[List[int]]) -> int:
         res = 0
-        arr = [[0] for _ in range(n)]
+        arr = [[0]*m for _ in range(n)]
         for row, col in indices:
             for i in range(m):
+                arr[row][i] += 1
+            for j in range(n):
+                arr[j][col] += 1
+        for row in arr:
+            for i in row:
+                if i%2 ==1:
+                    res += 1
+        return res
