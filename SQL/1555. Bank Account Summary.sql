@@ -76,6 +76,7 @@ Jonathan received $500 on "2020-08-02" and paid $200 on "2020-08-08", credit (20
 Winston received $400 on "2020-08-01" and paid $500 on "2020-08-03", credit (10000 +400 -500) = $9990
 Luis didn't received any transfer, credit = $800
 */
+
 SELECT user_id,
        user_name,
        (credit - IFNULL(out_cash, 0) + IFNULL(in_cash, 0)) AS credit,
@@ -94,7 +95,7 @@ LEFT JOIN
      GROUP BY paid_to) in_tmp 
 ON U.user_id = in_tmp.paid_to
 
--- Solution 1
+-- Solution 2
 SELECT U.user_id,
        user_name,
        (credit - out_cash + in_cash) AS credit,
@@ -114,7 +115,7 @@ JOIN
      GROUP BY user_id) in_tmp ON U.user_id = in_tmp.user_id
 
 
---- Solution 2
+--- Solution 1
 SELECT U.user_id,
        user_name,
        (credit - out_cash + in_cash) AS credit,
@@ -134,3 +135,5 @@ FROM Users U,
      GROUP BY user_id) in_tmp
 WHERE U.user_id = out_tmp.user_id
     AND U.user_id = in_tmp.user_id
+
+
