@@ -51,4 +51,34 @@ grid[i][j] is 0 or 1.
 """
 class Solution:
     def minDays(self, grid: List[List[int]]) -> int:
+        m, n = len(grid), len(grid[0])
         
+        def countIsland():
+            roots = {(i,j):(i,j) for i in range(m) for j in range(n)}
+            def find(i):
+                if roots[i] != i: roots[i] = find(roots[i])
+                return roots[i]                    
+            
+            def unite(i, j):
+                roots[find(i)] = find(j)
+                
+            for i in range(m):
+                for j in range(n):
+                    if grid[i][j]:
+                        if i < m - 1 and grid[i + 1][j]:
+                            unite((i, j), (i + 1, j))
+                        if j < n - 1 and grid[i][j + 1]:
+                            unite((i, j), (i, j + 1))
+            return len(set(find((i, j)) for i in range(m) for j in range(n) if grid[i][j]))
+        
+        if countIsland() != 1:
+            return 0
+        
+        for i in range(m):
+            for j in range(n):
+                if grid[i][j]:
+                    grid[i][j] = 0
+                    if countIsland() != 1:
+                        return 1
+                    grid[i][j] = 1
+        return 2        

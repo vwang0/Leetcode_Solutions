@@ -41,24 +41,17 @@ Constraints:
 class Solution:
     def getMaxLen(self, nums: List[int]) -> int:
         n = len(nums)
-        max_ending_here = 1
-        min_ending_here = 1
-        max_so_far = 1
-        flag = 0
-        for i in range(0, n):
+        pos, neg = [0] * n, [0] * n
+        if nums[0] > 0: pos[0] = 1
+        if nums[0] < 0: neg[0] = 1
+        ans = pos[0]
+        for i in range(1, n):
             if nums[i] > 0:
-                max_ending_here = max_ending_here * nums[i]
-                min_ending_here = min(min_ending_here * nums[i], 1)
-                flag = 1
-            elif nums[i] == 0:
-                max_ending_here = 1
-                min_ending_here = 1
-            else:
-                temp = max_ending_here
-                max_ending_here = max(min_ending_here * nums[i], 1)
-                min_ending_here = temp * nums[i]
-            if (max_so_far < max_ending_here):
-                max_so_far = max_ending_here
-        if flag == 0 and max_so_far == 1:
-            return 0
-        return max_so_far
+                pos[i] = 1 + pos[i - 1]
+                neg[i] = neg[i - 1] + 1 if neg[i - 1] > 0 else 0
+            elif nums[i] < 0:
+                pos[i] = 1 + neg[i - 1] if neg[i - 1] > 0 else 0
+                neg[i] = 1 + pos[i - 1]
+            ans = max(ans, pos[i])
+        return ans
+
