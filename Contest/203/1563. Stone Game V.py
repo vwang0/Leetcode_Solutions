@@ -36,6 +36,22 @@ Constraints:
 
 class Solution:
     def stoneGameV(self, stoneValue: List[int]) -> int:
+        @lru_cache(None)
+        def dfs(i: int, j: int) -> int:
+            res = 0
+            for k in range(i, j):
+                if v[k] - v[i - 1] <= v[j] - v[k]:
+                    res = max(res, v[k] - v[i - 1] + dfs(i, k))
+                if v[k] - v[i - 1] >= v[j] - v[k]:
+                    res = max(res, v[j] - v[k] + dfs(k + 1, j))
+            return res
+
+        v = [0] + list(itertools.accumulate(stoneValue))
+        return dfs(1, len(v) - 1)
+
+
+class Solution:
+    def stoneGameV(self, stoneValue: List[int]) -> int:
         n = len(stoneValue)
         prefix = [0] * (n + 1)
         for i, a in enumerate(stoneValue):
@@ -55,3 +71,4 @@ class Solution:
             return res
 
         return dp(0, n - 1)
+
