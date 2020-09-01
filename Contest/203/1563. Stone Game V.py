@@ -36,6 +36,27 @@ Constraints:
 
 class Solution:
     def stoneGameV(self, stoneValue: List[int]) -> int:
+        n = len(stoneValue)
+        acc = [0] + list(itertools.accumulate(stoneValue))
+
+        @functools.lru_cache(None)
+        def dfs(i, j):
+            if j - i == 1:
+                return 0
+            ans = 0
+            for k in range(i + 1, j):
+                s1, s2 = acc[k] - acc[i], acc[j] - acc[k]
+                if s1 <= s2:
+                    ans = max(ans, dfs(i, k) + s1)
+                if s1 >= s2:
+                    ans = max(ans, dfs(k, j) + s2)
+            return ans
+
+        return dfs(0, n)
+
+
+class Solution:
+    def stoneGameV(self, stoneValue: List[int]) -> int:
         @lru_cache(None)
         def dfs(i: int, j: int) -> int:
             res = 0
@@ -71,4 +92,3 @@ class Solution:
             return res
 
         return dp(0, n - 1)
-
