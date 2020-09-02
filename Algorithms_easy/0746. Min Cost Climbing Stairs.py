@@ -26,3 +26,5 @@ class Solution:
         for i in range(2, N):
             a, b = b, min(a, b) + cost[i]
         return min(a, b)
+
+
