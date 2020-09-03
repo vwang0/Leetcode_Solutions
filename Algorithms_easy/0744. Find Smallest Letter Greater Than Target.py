@@ -41,7 +41,6 @@ letters consists of lowercase letters, and contains at least 2 unique letters.
 target is a lowercase letter.
 """
 
-
 class Solution:
     def nextGreatestLetter(self, letters: List[str], target: str) -> str:
         if not letters: return None
@@ -51,5 +50,20 @@ class Solution:
                 return ch
         return letters[0]
 
+class Solution:
+    def nextGreatestLetter(self, letters: List[str], target: str) -> str:
+        if not letters: return None
+        n = len(letters)
+        low = 0
+        high = n - 1
+        result = 0
 
+        while low <= high:
+            mid = low + (high - low) // 2
+            if letters[mid] > target:
+                result = mid
+                high = mid - 1
+            else:
+                low = mid + 1
 
+        return letters[result]
