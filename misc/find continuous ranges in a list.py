@@ -9,8 +9,9 @@ output: [[1, 2, 3, 4]]
 
 """
 
+
 class Solution:
-    def findRanges(self, nums: List[int]) -> List[List[int]]:
+    def numRange(self, nums):
         nums.sort()
         temp = [nums[0]]
         res = []
@@ -20,8 +21,5 @@ class Solution:
             else:
                 res.append(temp)
                 temp = [nums[i]]
-        if len(temp) == len(nums):
-            return [nums]
+        res.append(temp)
         return res
-
-
