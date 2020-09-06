@@ -24,7 +24,6 @@ class Solution:
     def largestTriangleArea(self, points: List[List[int]]) -> float:
         res = []
         for i, j, k in itertools.combinations(points, 3):
-            res.append(
-                abs(i[0] * j[1] + j[0] * k[1] + k[0] * i[1] - j[0] * i[1] -
-                    k[0] * j[1] - i[0] * k[1]))
-        return 0.5 * max(res)
+            res.append(0.5 * abs(i[0] * j[1] + j[0] * k[1] + k[0] * i[1] -
+                                 j[0] * i[1] - k[0] * j[1] - i[0] * k[1]))
+        return max(res)
