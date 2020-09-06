@@ -61,3 +61,5 @@ class Solution:
             elif count == 2 * ones:
                 hi += 1
         return lo * hi % (10**9 + 7)
+
+        
