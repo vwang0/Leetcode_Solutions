@@ -47,3 +47,7 @@ class Solution:
     def binaryGap(self, N: int) -> int:
         ones = [i for i, n in enumerate(bin(N)) if n == '1']
         return max([b - a for a, b in zip(ones, ones[1:])] or [0])
+
+
+
+        
