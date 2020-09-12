@@ -38,6 +38,10 @@ Constraints:
 1 <= A.length <= 100
 1 <= A[i].length <= 1000
 """
+
+
 class Solution:
     def minDeletionSize(self, A: List[str]) -> int:
-        
+        return sum(list(col) != sorted(col) for col in zip(*A))
+
+
