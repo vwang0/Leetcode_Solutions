@@ -83,3 +83,5 @@ WHERE visit_id NOT IN
          FROM Transactions)
 GROUP BY 1
 ORDER BY 2 DESC
+
+
