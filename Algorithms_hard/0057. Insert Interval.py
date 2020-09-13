@@ -31,3 +31,6 @@ class Solution:
                 newInterval[1] = max(newInterval[1], y)
 
         return res + [newInterval] + intervals[i+1:]
+    
+    
+    
