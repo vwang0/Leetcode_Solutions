@@ -24,6 +24,6 @@ class Solution(object):
         :rtype: int
         """
         total, totalMax = 0, 0
-        for num in nums: 
-            total, totalMax = totalMax, max(total + num, totalMax)
-        return totalMax     
+        for num in nums:
+            totalMax, total = max(total + num, totalMax), totalMax
+        return totalMax
