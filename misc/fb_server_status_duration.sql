@@ -35,7 +35,7 @@ with temp as
      FROM table)
 
 SELECT server_id,
-       SUM(IFNULL(DATE_DIFF(next_date, as_of_date), CURDATE()- as_of_date)) repair_days
+       SUM(IFNULL(DATE_DIFF(next_date, as_of_date), CURDATE() - as_of_date)) repair_days
 from temp
 where repair_status= 'repair'
 group by 1;
