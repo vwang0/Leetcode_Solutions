@@ -50,3 +50,6 @@ class Solution:
         return dx == dy and px != py
 
 
+        
+
+
