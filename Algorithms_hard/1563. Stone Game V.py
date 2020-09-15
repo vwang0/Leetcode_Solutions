@@ -32,7 +32,52 @@ Constraints:
 1 <= stoneValue.length <= 500
 1 <= stoneValue[i] <= 10^6
 """
+# O(N^2) solution
+from functools import lru_cache
+import itertools
+class Solution:
+    def stoneGameV(self, stoneValue: List[int]) -> int:
 
+        pre = [0] + list(itertools.accumulate(stoneValue))
+
+        n = len(stoneValue)
+        idx = [[0] * n for _ in range(n)]
+        for i in range(n):
+            idx[i][i] = i
+            if i < n - 1:
+                idx[i][i + 1] = i
+        for i in range(n - 2):
+            for j in range(i + 2, n):
+                tmp = idx[i][j - 1]
+                while pre[tmp + 1] - pre[i] < pre[j + 1] - pre[tmp + 1]:
+                    tmp += 1
+                idx[i][j] = tmp
+
+        @lru_cache(None)
+        def maxL(i, j):
+            if i == j: return stoneValue[i]
+            return max(maxL(i, j - 1), pre[j + 1] - pre[i] + dp(i, j))
+
+        @lru_cache(None)
+        def maxR(i, j):
+            if i == j: return stoneValue[i]
+            return max(maxR(i + 1, j), pre[j + 1] - pre[i] + dp(i, j))
+
+        @lru_cache(None)
+        def dp(i, j):
+            if i + 1 == j: return min(stoneValue[i], stoneValue[j])
+            mid = idx[i][j]
+            res = 0
+            if mid > i: res = max(res, maxL(i, mid - 1))
+            if mid < j: res = max(res, maxR(mid + 1, j))
+            if pre[j + 1] - pre[mid + 1] == pre[mid + 1] - pre[i]:
+                res = max(res, maxL(i, mid), maxR(mid + 1, j))
+            return res
+
+        return dp(0, n - 1)
+
+
+#  Below are all O(N^3) solutions
 
 class Solution:
     def stoneGameV(self, stoneValue: List[int]) -> int:
