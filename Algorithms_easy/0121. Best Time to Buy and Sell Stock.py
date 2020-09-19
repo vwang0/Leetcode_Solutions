@@ -34,5 +34,14 @@ class Solution(object):
                 diff = prices[i] - low
                 if diff > maxDiff:
                     maxDiff = diff
-        return maxDiff            
+        return maxDiff
 
+
+class Solution:
+    def maxProfit(self, prices: List[int]) -> int:
+        max_profit, minimum = 0, float('inf')
+        for price in prices:
+            minimum = min(minimum, price)
+            profit = price - minimum
+            max_profit = max(max_profit, profit)
+        return max_profit
