@@ -99,3 +99,5 @@ JOIN
 ) ps
 WHERE W.product_id = ps.product_id
 GROUP BY name
+
+

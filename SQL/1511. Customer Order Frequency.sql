@@ -112,3 +112,5 @@ GROUP BY customer_id
 HAVING SUM(IF(price>=100, 1, 0))=2
 -- HAVING COUNT(IF(price>=100, 1, 0))=2 
 -- HAVING sum(CASE WHEN price >= 100 THEN 1 ELSE 0 END) = 2
+
+

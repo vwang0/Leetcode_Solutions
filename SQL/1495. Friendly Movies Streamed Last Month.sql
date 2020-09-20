@@ -24,3 +24,6 @@ JOIN TVProgram TV ON C.content_id = TV.content_id
 WHERE DATE_FORMAT(program_date, '%Y-%m') = '2020-06'
     AND Kids_content = 'Y'
     AND content_type = 'Movies'
+
+
+    

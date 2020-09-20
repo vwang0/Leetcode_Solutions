@@ -59,3 +59,5 @@ SELECT LEFT(order_date, 7) month,
 FROM Orders
 WHERE invoice > 20
 GROUP BY month
+
+

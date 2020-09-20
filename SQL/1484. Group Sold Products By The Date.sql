@@ -31,3 +31,5 @@ SELECT sell_date,
                     ORDER BY product) AS products
 FROM Activities
 GROUP BY sell_date
+
+

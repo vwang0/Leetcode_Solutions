@@ -60,3 +60,5 @@ ORDER BY PRODUCT_NAME, SALE_DATE
 
 -- If you use GROUP BY product_name, sale_date, the records are grouped before product_name being trimmed and sale_date being formatted, which is wrong.
 -- You should use ' GROUP BY 1, 2', instead.
+
+

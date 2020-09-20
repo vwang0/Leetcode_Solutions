@@ -46,3 +46,5 @@ Bob and George both have a condition that starts with DIAB1.
 
 SELECT * FROM Patients
 WHERE conditions REGEXP 'DIAB1'
+
+
