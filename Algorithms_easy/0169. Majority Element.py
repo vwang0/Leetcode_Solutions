@@ -13,23 +13,19 @@ Example 2:
 Input: [2,2,1,1,1,2,2]
 Output: 2
 """
-class Solution(object):
-    def majorityElement(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: int
-        """
-        counts = Counter(nums)
-        return max(counts.keys(), key = counts.get)
 
-class Solution(object):
-    def majorityElement(self, nums):
-        count = 0
-        candidate = None
+
+class Solution:
+    def majorityElement(self, nums: List[int]) -> int:
+        cnt = Counter(nums)
+        return max(cnt.keys(), key=cnt.get)
+
+
+class Solution:
+    def majorityElement(self, nums: List[int]) -> int:
+        dic = {}
         for num in nums:
-            if count == 0:
-                candidate = num
-            count += (1 if num == candidate else -1)
-        return candidate
-
-
+            dic[num] = dic.get(num, 0) + 1
+        for num in nums:
+            if dic[num] > len(nums) // 2:
+                return num
