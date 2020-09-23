@@ -52,10 +52,9 @@ class Solution:
         minSpare = float('inf')
         minIdx = 0
         for i in range(len(gas)):
-            spare += gas[i]-cost[i]
+            spare += gas[i] - cost[i]
             if spare < minSpare:
                 minSpare = spare
                 minIdx = i
         return -1 if spare < 0 else (minIdx + 1)% length 
 
-        
