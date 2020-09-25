@@ -30,3 +30,6 @@ class Solution:
         for a in A:
             res &= collections.Counter(a)
         return list(res.elements())
+
+
+        
