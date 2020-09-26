@@ -28,7 +28,6 @@ Note:
 1 <= A.length < 10^4
 -10^9 <= A[i] <= 10^9
 """
-
 class Solution:
     def fixedPoint(self, A: List[int]) -> int:
         for i in range(len(A)):
