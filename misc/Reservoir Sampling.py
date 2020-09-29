@@ -45,8 +45,7 @@ def printArray(stream,n):
 def selectKItems(stream, n, k): 
         i=0;  
         # index for elements 
-        # in stream[] 
-          
+        # in stream[]           
         # reservoir[] is the output  
         # array. Initialize it with 
         # first k elements from stream[] 
