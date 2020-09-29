@@ -32,3 +32,7 @@ class Solution:
                 get_dict[x] = 1
                 
         return sorted([key for key, val in get_dict.items() if val == 3])
+
+
+
+        
