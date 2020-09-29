@@ -18,3 +18,17 @@ Constraints:
 class Solution:
     def arraysIntersection(self, arr1: List[int], arr2: List[int], arr3: List[int]) -> List[int]:
         return sorted(set(arr1) & set(arr2) & set(arr3))
+
+
+class Solution:
+    def arraysIntersection(self, arr1: List[int], arr2: List[int], arr3: List[int]) -> List[int]:
+        combined = arr1 + arr2 + arr3
+        get_dict = {}
+        
+        for x in combined:
+            if x in get_dict:
+                get_dict[x] += 1
+            else:
+                get_dict[x] = 1
+                
+        return sorted([key for key, val in get_dict.items() if val == 3])
