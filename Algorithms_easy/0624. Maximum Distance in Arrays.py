@@ -17,10 +17,10 @@ The integers in the m arrays will be in the range of [-10000, 10000].
 
 """
 class Solution:
-    def maxDistance(self, arrays: List[List[int]]):
+    def maxDistance(self, arrays: List[List[int]]) -> int:
         res = 0 
         lo , hi = float('inf'), float('-inf')
         for arr in arrays:
-            res = max(res, array[-1] - lo, hi - arr[0])
-            lo, hi = min(lo, array[0]), max(hi, array[-1])
-        return res
+            res = max(res, arr[-1] - lo, hi - arr[0])
+            lo, hi = min(lo, arr[0]), max(hi, arr[-1])
+        return res        
