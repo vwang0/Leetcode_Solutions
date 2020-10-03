@@ -22,9 +22,12 @@ All the integers in the given input belong to the range: [-1e7, 1e7].
 """
 class Solution:
     def findPairs(self, nums: List[int], k: int) -> int:
+        cnt = collections.Counter(nums)
         res = 0
-        cnter = collections.Counter(nums)
-        for c in cnter:
-            if (k>0 and c+k in cnter) or (k==0 and cnter[c] >1):
+        for c in cnt.keys():
+            if (k > 0 and c+k in cnt.keys()) or (k == 0 and cnt[c] > 1):
                 res += 1
         return res
+    
+    
+    
