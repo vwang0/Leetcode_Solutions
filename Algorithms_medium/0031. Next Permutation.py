@@ -44,7 +44,7 @@ class Solution:
                     idx = j
                     j += 1
                 nums[idx], nums[i-1] = nums[i-1], nums[idx]
-                for k in range((n-1)//2):
+                for k in range((n-i)//2):
                     nums[i+k], nums[n-1-k] = nums[n-1-k], nums[i+k]
                 break
         else:
