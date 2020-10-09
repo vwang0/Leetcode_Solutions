@@ -1,39 +1,45 @@
 """
 0049. Group Anagrams
-Given an array of strings, group anagrams together.
+Medium
 
-Example:
+Given an array of strings strs, group the anagrams together. You can return the answer in any order.
 
-Input: ["eat", "tea", "tan", "ate", "nat", "bat"],
-Output:
-[
-  ["ate","eat","tea"],
-  ["nat","tan"],
-  ["bat"]
-]
-Note:
+An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.
 
-All inputs will be in lowercase.
-The order of your output does not matter.
+Example 1:
+
+Input: strs = ["eat","tea","tan","ate","nat","bat"]
+Output: [["bat"],["nat","tan"],["ate","eat","tea"]]
+Example 2:
+
+Input: strs = [""]
+Output: [[""]]
+Example 3:
+
+Input: strs = ["a"]
+Output: [["a"]]
+
+Constraints:
+
+1 <= strs.length <= 104
+0 <= strs[i].length <= 100
+strs[i] consists of lower-case English letters.
 """
-class Solution(object):
-    def groupAnagrams(self, strs):
-        """
-        :type strs: List[str]
-        :rtype: List[List[str]]
-        """
+class Solution:
+    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
         def convert(s):
-            res = [0]*26
-            for char in s:
-                res[ord(char)-ord('a')] += 1
+            res = [0] * 26
+            for ch in s:
+                res[ord(ch) - ord('a')] += 1
             return tuple(res)
-        rec = {}
+        
+        cnt = {}
         res = []
         for s in strs:
             t = convert(s)
-            if t in rec:
-                res[rec[t]].append(s)
+            if t in cnt:
+                res[cnt[t]].append(s)
             else:
                 res.append([s])
-                rec[t] = len(res)-1
+                cnt[t] = len(res) - 1
         return res
