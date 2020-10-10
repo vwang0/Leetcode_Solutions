@@ -1,0 +1,39 @@
+markdown table
+https://www.tablesgenerator.com/markdown_tables#
+
+https://labuladong.gitbook.io/algo/
+
+leetcode problem list:
+https://leetcode.jp/problemdetail.php?id=111
+https://leetcode.jp/problems.php
+
+=======SQL lock &
+https://github.com/kamyu104/LeetCode-Solutions/tree/master/MySQL
+https://github.com/ladychili/leetcode/tree/master/sql
+https://zqt0.gitbook.io/leetcode/sql
+https://www.showsql.com/leetcode-database-problems-and-solutions/
+http://huanyouchen.github.io/2019/10/26/SQL-exercises-LeetCode-medium-part/
+=======SQL unlock
+https://nifannn.github.io/tags/#SQL
+https://github.com/yanshengjia/algorithm/tree/master/leetcode/SQL
+
+=======Algorithm:
+leetcode all in one
+https://github.com/grandyang/leetcode
+all 1392 problems(not complete):
+https://walkccc.github.io/LeetCode/python3/
+按语言分类:
+https://github.com/kamyu104/LeetCode-Solutions/tree/master/Python
+按问题类型分类
+https://github.com/yanshengjia/algorithm/tree/master/leetcode
+Python & SQL
+https://cheatsheet.dennyzhang.com/cheatsheet-leetcode-a4
+https://www.showsql.com/category/leetcode-algorithms/
+https://github.com/KrisYu/LeetCode-CLRS-Python
+https://nifannn.github.io/tags/#Leetcode
+
+Leetcode题解算法：
+https://github.com/CyC2018/CS-Notes/blob/master/notes/Leetcode%20%E9%A2%98%E8%A7%A3%20-%20%E7%9B%AE%E5%BD%95.md
+https://github.com/CyC2018/CS-Notes/tree/master/notes
+
+
