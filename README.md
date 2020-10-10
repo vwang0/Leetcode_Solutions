@@ -1,4 +1,4 @@
-# (Leetcode Solutions) [https://leetcode.com/vwang0/]
+# [Leetcode Solutions](https://leetcode.com/vwang0/)
 
 Problem List (As of 2020/10/10)
 
