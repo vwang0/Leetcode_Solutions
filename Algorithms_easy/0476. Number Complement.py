@@ -1,8 +1,6 @@
 """
-0476. Number Complement
+0476. Number Complement, same as 1009
 Given a positive integer num, output its complement number. The complement strategy is to flip the bits of its binary representation.
-
- 
 
 Example 1:
 
@@ -27,8 +25,8 @@ class Solution:
     def findComplement(self, num: int):
         res = '0b'
         for bit in bin(num)[2:]:
-            if bit == 1:
+            if bit == '1':
                 res += '0'
             else:
                 res += '1'
-        return res
+        return int(res, 2)

@@ -44,8 +44,7 @@ class TwoSum:
                 return True
             else:
                 dict1[num] = i
-        
-
+        return False
 
 # Your TwoSum object will be instantiated and called as such:
 # obj = TwoSum()
