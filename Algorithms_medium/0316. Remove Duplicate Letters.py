@@ -18,7 +18,6 @@ Example 2:
 
 Input: s = "cbacdcbc"
 Output: "acdb"
- 
 
 Constraints:
 
