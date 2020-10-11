@@ -1,6 +1,6 @@
 
 
-#### Leetcode Category - Algorithm - easy   
+#### Leetcode Category - Algorithm - Easy   
 
 
 |   #  |                                Title                               | Acceptance | Difficulty |    Type    |
