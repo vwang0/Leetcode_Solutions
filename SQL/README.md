@@ -12,6 +12,7 @@
 (6) WITH {CUBE | ROLLUP}   
 (7) HAVING <having_condition>   
 (10) ORDER BY <order_by_list>     
+   
 
 
 

@@ -39,7 +39,7 @@ class Solution(object):
             self.sum = root.val
             dfs(root.left)
 
-        dfs(root)         
-        return root    
-            
+        dfs(root)
+        return root
+
 
