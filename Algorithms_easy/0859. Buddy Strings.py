@@ -36,6 +36,13 @@ A and B consist only of lowercase letters.
 class Solution:
     def buddyStrings(self, A: str, B: str) -> bool:
         if len(A) != len(B): return False
+        dif = [(a, b) for a, b in zip(A, B) if a != b]
+        return (A == B and len(A) > len(set(A))) or (len(dif) == 2 and dif[0] == dif[1][::-1])
+
+     
+class Solution:
+    def buddyStrings(self, A: str, B: str) -> bool:
+        if len(A) != len(B): return False
         if A == B and len(A) > len(set(A)): return True
         dif = [(a, b) for a, b in zip(A, B) if a != b]
         return len(dif) == 2 and dif[0] == dif[1][::-1]
