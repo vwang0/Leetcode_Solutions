@@ -8,8 +8,6 @@ After this process, we have some array B.
 
 Return the smallest possible difference between the maximum value of B and the minimum value of B.
 
- 
-
 Example 1:
 
 Input: A = [1], K = 0
