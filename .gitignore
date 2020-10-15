@@ -1,4 +1,5 @@
 .vscode
 .metals
-/bkup
+.bkup
+/.bkup
 */.ipynb_checkpoints
