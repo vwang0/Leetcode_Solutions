@@ -40,13 +40,4 @@ class Solution:
                             res.add(tuple(sorted([nums[i],nums[j],nums[k],nums[l]])))
         return list(res)            
                
-
-
-                
-                
-            
-                
-        
-                
-
-                
+               
