@@ -20,7 +20,7 @@ Explanation: The answer is "wke", with the length of 3.
              Note that the answer must be a substring, "pwke" is a subsequence and not a substring.
 """
 class Solution:
-    def lengthOfLongestSubstring(self, s: str):
+    def lengthOfLongestSubstring(self, s: str)-> int:
         dic, res, start = {}, 0, 0
         for i, ch in enumerate(s):
             if ch in dic: 
@@ -31,7 +31,7 @@ class Solution:
 
 
 class Solution:
-    def lengthOfLongestSubstring(self, s: str):
+    def lengthOfLongestSubstring(self, s: str)-> int:
         dic, start, length = {}, 0, 0
         for i, ch in enumerate(s):
             if ch in dic:
@@ -41,3 +41,14 @@ class Solution:
         return length
 
         
+class Solution:
+    def lengthOfLongestSubstring(self, s: str) -> int:
+        k, res, c_dict = -1, 0, {}
+        for i, c in enumerate(s):
+            if c in c_dict and c_dict[c] > k: 
+                k = c_dict[c]
+                c_dict[c] = i
+            else:
+                c_dict[c] = i
+                res = max(res, i-k)
+        return res
