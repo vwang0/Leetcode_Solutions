@@ -73,7 +73,7 @@ class Solution:
                 l.append(a)
                 continue
             if l[-1] > 0 and a < 0:
-                if l[-1] == a:
+                if l[-1] == -a:
                     l.pop()
             else:
                 l.append(a)
