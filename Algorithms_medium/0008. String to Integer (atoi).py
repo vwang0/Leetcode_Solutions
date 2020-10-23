@@ -43,16 +43,16 @@ Explanation: The number "-91283472332" is out of the range of a 32-bit signed in
 """
 class Solution(object):
     def myAtoi(self, str):
-        numberStr = re.findall('^[\+\-]?0*\d+', str.strip())
-        if numberStr:
-            number = int(numberStr[0])
-            MAX_INT = 2147483647
-            MIN_INT = -2147483648
-            if number < MIN_INT:
-                return MIN_INT
-            elif number > MAX_INT:
-                return MAX_INT
+        numStr = re.findall('^[\+\-]?\d+', str.strip(s))
+        if numStr:
+            num = int(numStr[0])
+            maxNum = 2147483647
+            minNum = -2147483648
+            if num < minNum:
+                return minNum
+            elif num > maxNum:
+                return maxNum
             else:
-                return number
+                return num
         else:
             return 0
