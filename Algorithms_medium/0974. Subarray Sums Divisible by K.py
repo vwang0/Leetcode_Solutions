@@ -19,4 +19,11 @@ Note:
 """
 class Solution:
     def subarraysDivByK(self, A: List[int], K: int) -> int:
-        
+        res = 0
+        preSum = 0 
+        count = [1] + [0]*K
+        for a in A:
+            preSum = (preSum + a) % K
+            res += count[preSum]
+            count[preSum] += 1
+        return res
