@@ -42,9 +42,11 @@ class Solution(object):
 
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
-        max_profit, minimum = 0, float('inf')
+        max_profit, min_price = 0, float('inf')
         for price in prices:
-            minimum = min(minimum, price)
-            profit = price - minimum
-            max_profit = max(max_profit, profit)
+            min_price = min(min_price, price)
+            cur_profit = price - min_price
+            max_profit = max(max_profit, cur_profit)
         return max_profit
+
+# Time: O(N)  Space: O(1)
