@@ -1,7 +1,8 @@
 # [Leetcode Solutions](https://leetcode.com/vwang0/)
 
 Problem List (As of 2020/10/10) -  **705 / 1617**   
-Problem List (As of 2020/10/20) -  **736 / 1617**
+Problem List (As of 2020/10/20) -  **736 / 1617**   
+Problem List (As of 2020/10/26) -  **759 / 1617**
 
 |   #  |                                         Title                                         | Acceptance | Difficulty |     Type    |
 |:----:|:-------------------------------------------------------------------------------------:|:----------:|:----------:|:-----------:|
@@ -232,7 +233,7 @@ Problem List (As of 2020/10/20) -  **736 / 1617**
 | 0225 | Implement Stack using Queues                                                          |   46.10%   | Easy       | Algorithms  |
 | 0226 | Invert Binary Tree                                                                    |   65.70%   | Easy       | Algorithms  |
 | 0227 | Basic Calculator II                                                                   |   37.40%   | Medium     | Algorithms  |
-| 0228 | Summary Ranges                                                                        |   39.90%   | Medium     | Algorithms  |
+| 0228 | Summary Ranges                                                                        |   39.90%   | Easy       | Algorithms  |
 | 0229 | Majority Element II                                                                   |   37.90%   | Medium     | Algorithms  |
 | 0230 | Kth Smallest Element in a BST                                                         |   61.10%   | Medium     | Algorithms  |
 | 0231 | Power of Two                                                                          |   43.80%   | Easy       | Algorithms  |
