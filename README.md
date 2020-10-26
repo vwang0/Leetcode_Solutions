@@ -1,7 +1,7 @@
 # [Leetcode Solutions](https://leetcode.com/vwang0/)
 
 Problem List (As of 2020/10/10) -  **705 / 1617**   
-Problem List (As of 2020/10/20) -  **736 / 1617**
+Problem List (As of 2020/10/20) -  **736 / 1617**   
 Problem List (As of 2020/10/26) -  **759 / 1617**
 
 |   #  |                                         Title                                         | Acceptance | Difficulty |     Type    |
