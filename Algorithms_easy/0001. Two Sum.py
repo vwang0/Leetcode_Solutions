@@ -1,5 +1,7 @@
 """
-0001. Two Sum
+0001. Two Sum 
+Array 
+
 20200310
 Given an array of integers, return indices of the two numbers 
 such that they add up to a specific target.
@@ -25,4 +27,4 @@ class Solution:
                 
 
 a = Solution()
-a.twoSum([2, 7, 11, 15])
+a.twoSum([2, 7, 11, 15], 9)
