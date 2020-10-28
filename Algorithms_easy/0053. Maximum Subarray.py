@@ -1,5 +1,7 @@
 """
-53. Maximum Subarray
+0053. Maximum Subarray
+Array 
+
 Given an integer array nums, find the contiguous subarray 
 (containing at least one number) which has the largest sum 
 and return its sum.
@@ -34,6 +36,7 @@ class Solution:
             mx, mn = max(mx, sm-mn), min(mn,sm)
         return mx
 
+# Dynamic Programming
 class Solution:
     def maxSubArray(self, nums: List[int]) -> int:
         max_curr = max_glb = nums[0]
@@ -41,3 +44,6 @@ class Solution:
             max_curr = max(nums[i], max_curr+nums[i])
             max_glb = max(max_glb, max_curr)
         return max_glb
+
+# Time: O(N)
+# Space: O(1)

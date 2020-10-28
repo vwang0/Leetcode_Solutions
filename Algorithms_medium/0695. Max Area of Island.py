@@ -48,9 +48,9 @@ class Solution:
 class Solution:
     def maxAreaOfIsland(self, grid: List[List[int]]):
         n, m = len(grid), len(grid[0])
+        
         def dfs(i, j):
             if 0<=i<n and 0<=j<m and grid[i][j]:
-                # mark as visited
                 grid[i][j] = 0
                 return 1+dfs(i+1, j)+dfs(i-1, j)+dfs(i, j+1)+dfs(i, j-1)
             return 0
@@ -58,6 +58,5 @@ class Solution:
         res = 0
         for i in range(len(grid)):
             for j in range(len(grid[0])):
-                if grid[i][j] == 1:
-                    res = max(res, dfs(i, j))
+                res = max(res, dfs(i, j))
         return res        

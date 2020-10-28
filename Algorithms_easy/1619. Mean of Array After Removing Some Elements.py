@@ -45,4 +45,10 @@ class Solution(object):
         arr.sort()
         n = len(arr)
         return sum(arr[int(0.05*n):int(0.95*n)])/(0.9*n)
+
+
+class Solution(object):
+    def trimMean(self, arr):
+        n = len(arr)
+        return sum(sorted(arr)[n//20:-n//20])// (n//9*10)
         
