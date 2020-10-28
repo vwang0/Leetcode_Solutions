@@ -54,3 +54,8 @@ class Solution:
 
         dic_order = sorted(words, key=lambda x: [alien_dic[c] for c in x])
         return dic_order == words
+
+class Solution:
+    def isAlienSorted(self, words, order):
+            return words == sorted(words, key=lambda w: map(order.index, w))
+            
