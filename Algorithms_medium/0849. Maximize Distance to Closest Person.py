@@ -42,3 +42,15 @@ class Solution:
                 res = max(res, i if last < 0 else (i - last) // 2)
                 last = i
         return max(res, N - last - 1)
+
+class Solution:
+    def maxDistToClosest(self, seats: List[int]) -> int:
+        length, turn = len(seats), []
+        for i in range(length):
+            if seats[i] == 1:
+                turn.append(i)
+        res = max(turn[0], length - turn[-1] - 1)
+        for i in range(0, len(turn) - 1):
+            if (turn[i+1] - turn[i]) // 2 > res:
+                res = (turn[i+1] - turn[i]) // 2
+        return res
