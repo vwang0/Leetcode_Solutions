@@ -35,4 +35,4 @@ class Solution:
                 if last < nums[i]:
                     total += count
             num_sequences_of_length[pos+1].append((max(1, total), nums[i]))
-        return sum([count for count,_ in num_sequences_of_length[len(dp)-1]])
+        return sum([count for count,_ in num_sequences_of_length[len(dp)]])
