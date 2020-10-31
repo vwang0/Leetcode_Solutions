@@ -1,7 +1,6 @@
 
 #### Leetcode Category - Algorithm - Medium   
 
-
 |   #  |                                         Title                                         | Acceptance | Difficulty |    Type    |
 |:----:|:-------------------------------------------------------------------------------------:|:----------:|:----------:|:----------:|
 | 0002 | Add Two Numbers                                                                       |   34.30%   | Medium     | Algorithms |
