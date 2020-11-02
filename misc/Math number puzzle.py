@@ -46,7 +46,12 @@ def solve(puzzle):
 solve("WHITE + WATER == PICNIC")
 # '85642 + 83427 == 169069'
 
+solve("HAWAII + IDAHO + IOWA + OHIO == STATES")
+# '510199 + 98153 + 9301 + 3593 == 621246'
+
 solve("SEND + MORE == MONEY")
 # '9567 + 1085 == 10652'
 
-solve("MOM + DAD + LOVE + YOU == EMILY")
+solve("DAD + LOVE == EMILY")
+# '464 + 9831 == 10295'
+
