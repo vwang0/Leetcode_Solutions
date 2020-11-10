@@ -45,8 +45,8 @@ Each node's value is either 0 or 1.
 #         self.next = next
 class Solution:
     def getDecimalValue(self, head: ListNode):
-        ans = 0
+        res = 0
         while head:
-            ans = (ans << 1) | head.val
+            res = (res << 1) | head.val
             head = head.next
-        return ans
+        return res
