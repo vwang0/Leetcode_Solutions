@@ -54,6 +54,6 @@ The mail of user 7 starts with a period.
 
 SELECT *
 FROM Users
-WHERE mail REGEXP '^[a-zA-Z][A-Z0-9._-]*@leetcode.com$'
+WHERE mail REGEXP '^[A-Za-z][A-Za-z0-9\_\.\-]*@leetcode\.com$'
 
 
