@@ -3,7 +3,8 @@
 Problem List (As of 2020/10/10) -  **705/1617 Solved**   
 Problem List (As of 2020/10/20) -  **736/1621 Solved**   
 Problem List (As of 2020/10/26) -  **759/1633 Solved**   
-Problem List (As of 2020/10/31) -  **768/1634 Solved** 
+Problem List (As of 2020/10/31) -  **768/1634 Solved**   
+Problem List (As of 2020/11/13) -  **778/1651 Solved**   
 
 
 |   #  |                                         Title                                         | Acceptance | Difficulty |     Type    |
