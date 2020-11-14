@@ -20,6 +20,7 @@ A pig can be allowed to drink simultaneously on as many buckets as one would lik
 After a pig has instantly finished drinking buckets, there has to be a cool down time of m minutes. During this time, only observation is allowed and no feedings at all.
 Any given bucket can be sampled an infinite number of times (by an unlimited number of pigs).
 """
+import math
 class Solution:
     def poorPigs(self, buckets: int, minutesToDie: int, minutesToTest: int) -> int:
         states = minutesToTest // minutesToDie + 1
