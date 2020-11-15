@@ -37,3 +37,19 @@ class Solution:
             return _helper(node.left) + res + _helper(node.right)
 
         return sum(i for i in _helper(root) if i >= L and i <= R)
+
+
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def rangeSumBST(self, root: TreeNode, low: int, high: int) -> int:
+        def helper(node):
+            res = []
+            if not node: return res
+            res.append(node.val)
+            return res + helper(node.left) + helper(node.right)
+        return sum(i for i in helper(root) if i >= low and i <= high)
