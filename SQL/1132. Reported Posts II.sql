@@ -70,14 +70,14 @@ The percentage for 2019-07-02 is 100% because one post was reported as spam and 
 The other days had no spam reports so the average is (50 + 100) / 2 = 75%
 Note that the output is only one number and that we do not care about the remove dates.
 */
-SELECT ROUND(AVG(removal_perc), 2) AS average_daily_percent
+SELECT ROUND(AVG(rem_perc), 2) AS average_daily_percent 
 FROM (
-    SELECT A.action_date, COUNT(DISTINCT R.post_id) / COUNT(DISTINCT A.post_id) * 100 AS removal_perc
+    SELECT A.action_date, COUNT(DISTINCT R.post_id)/COUNT(DISTINCT A.post_id) * 100 AS rem_perc
     FROM Actions AS A
-        LEFT JOIN Removals AS R
-        ON A.post_id = R.post_id
-    WHERE a.extra = 'spam'
-    GROUP BY a.action_date
-    ) temp
+    LEFT JOIN Removals AS R
+    ON A.post_id = R.post_id
+    WHERE A.extra = 'spam' AND a.action = 'report'
+    GROUP BY A.action_date
+) temp
 
 
