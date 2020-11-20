@@ -50,28 +50,30 @@ FROM (
            FROM request_accepted)) a
 GROUP BY id1
 ORDER BY num DESC
-LIMIT 1;
+LIMIT 1
+;
 
 SELECT id1 AS id,
        COUNT(*) AS num
-FROM (
-          (SELECT requester_id AS id1,
+FROM ((SELECT requester_id AS id1,
                   accepter_id AS id2
            FROM request_accepted)
       UNION 
           (SELECT accepter_id AS id1,
                   requester_id AS id2
            FROM request_accepted)) a
+           
 GROUP BY id1
 ORDER BY num DESC
 LIMIT 1
+;
 /*
 Follow-up:
 In the real world, multiple people could have the same most number of friends, can you find all these people in this case?
 */
 SELECT id1 AS id,
        COUNT(*) AS num,
-       DENSE_RANK() OVER (ORDER BY num) AS rank
+       DENSE_RANK() OVER (ORDER BY num) AS rnk
 FROM (
           (SELECT requester_id AS id1,
                   accepter_id AS id2
@@ -80,7 +82,7 @@ FROM (
           (SELECT accepter_id AS id1,
                   requester_id AS id2
            FROM request_accepted)) a
-WHERE rank = 1
+WHERE rnk = 1
 GROUP BY id1
 ORDER BY num DESC
 

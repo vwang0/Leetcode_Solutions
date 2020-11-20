@@ -70,4 +70,24 @@ WHERE (project_id, experience_years) IN (
                                         ON p2.employee_id = e2.employee_id
                                         GROUP BY project_id
 )
+;
+
+
+
+WITH cte AS (
+    SELECT project_id,
+    MAX(experience_years) AS experience_years
+    FROM Project AS p2
+    INNER JOIN Employee AS e2
+    ON p2.employee_id = e2.employee_id
+    GROUP BY project_id    
+)
+
+SELECT project_id, p1.employee_id 
+FROM Project AS p1
+INNER JOIN  Employee AS e1
+ON p1.employee_id = e1.employee_id
+WHERE (project_id, experience_years) IN (SELECT * FROM cte)
+
+
 
