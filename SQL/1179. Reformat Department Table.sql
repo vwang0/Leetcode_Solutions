@@ -56,3 +56,5 @@ SELECT id,
 FROM   department 
 GROUP  BY id
 ;
+
+
