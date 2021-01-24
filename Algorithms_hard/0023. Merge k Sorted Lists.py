@@ -12,6 +12,8 @@ Input:
 ]
 Output: 1->1->2->3->4->4->5->6
 '''
+
+# Solution 1
 class Solution(object):
     def mergeKLists(self, lists):
         """
@@ -35,3 +37,22 @@ class Solution(object):
                 lists[index] = lists[index].next
                 heapq.heappush(heap, (lists[index].val, index))
         return head 
+
+
+# Solution 2
+class Solution(object):
+    def mergeKLists(self, lists):
+        head = ListNode(-1)
+        cursor = head
+        nodes = []
+        ListNode.__lt__ = lambda x, y: True if x.val < y.val else False # key statement
+        for node in lists:
+            if node != None:
+                heapq.heappush(nodes, (node.val, node))
+        while len(nodes) > 0:
+            val, node = heapq.heappop(nodes)
+            cursor.next = node
+            if node.next:
+                heapq.heappush(nodes, (node.next.val, node.next))
+            cursor = cursor.next
+        return head.next
