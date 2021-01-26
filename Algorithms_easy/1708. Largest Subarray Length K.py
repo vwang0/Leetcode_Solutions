@@ -46,3 +46,4 @@ class Solution:
         mmax = max(nums[:len(nums)-k+1])
         idx = nums.index(mmax)
         return nums[idx: idx + k]        
+        
