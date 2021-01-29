@@ -50,7 +50,6 @@ class Solution:
                 queue += (node.left, i - 1), (node.right, i + 1)
         return [cols[i] for i in sorted(cols)]
 
-
 class Solution:
     def verticalOrder(self, root: TreeNode) -> List[List[int]]:
         data = defaultdict(list)
@@ -59,10 +58,8 @@ class Solution:
                 return
             data[x].append((y, node.val))
             dfs(node.left, x - 1, y + 1)
-            dfs(node.right, x + 1, y + 1)
-            
-        dfs(root, 0, 0)
-        
+            dfs(node.right, x + 1, y + 1)            
+        dfs(root, 0, 0)        
         result = []
         for x in sorted(data.keys()):
             result.append([v for y, v in sorted(data[x])])
