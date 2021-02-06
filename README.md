@@ -5,7 +5,7 @@ Problem List (As of 2020/10/20) -  **736/1621 Solved**
 Problem List (As of 2020/10/26) -  **759/1633 Solved**   
 Problem List (As of 2020/10/31) -  **768/1634 Solved**   
 Problem List (As of 2020/11/13) -  **778/1651 Solved**   
-Problem List (As of 2020/11/24) -  **788/1661 Solved**
+Problem List (As of 2020/11/24) -  **788/1661 Solved**   
 Problem List (As of 2020/12/17) -  **801/1691 Solved**   
 Problem List (As of 2020/02/06) -  **831/1751 Solved**
 
