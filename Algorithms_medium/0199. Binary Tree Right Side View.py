@@ -34,7 +34,7 @@ class Solution:
             curL, nxtL = nxtL, []
             for i in curL:
                 if i.left:
-                    nxtL.appen(i.left)
+                    nxtL.append(i.left)
                 if i.right:
                     nxtL.append(i.right)
         return res
