@@ -14,9 +14,9 @@ C is a single character, and guaranteed to be in string S.
 All letters in S and C are lowercase.
 """
 class Solution:
-    def shortestToChar(self, S: str, C: str) -> List[int]:
-        n = len(S)
-        res = [0 if s==C else n for s in S]
+    def shortestToChar(self, s: str, c: str) -> List[int]:
+        n = len(s)
+        res = [0 if S==c else n for S in s]
         for i in range(1,n):
             res[i] = min(res[i], res[i-1]+1)
         for i in range(n-2, -1, -1):
