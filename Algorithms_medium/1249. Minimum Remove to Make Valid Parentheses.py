@@ -36,7 +36,8 @@ Constraints:
 1 <= s.length <= 10^5
 s[i] is one of  '(' , ')' and lowercase English letters.
 """
-def minRemoveToMakeValid(self, s: str) -> str:
+class Solution:
+    def minRemoveToMakeValid(self, s: str) -> str:
         stack, i, invalids = [], 0, set()
         while i < len(s):
             if s[i] in ['(', ')']: 
