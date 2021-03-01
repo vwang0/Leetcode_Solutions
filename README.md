@@ -7,8 +7,9 @@ Problem List (As of 2020/10/31) -  **768/1634 Solved**
 Problem List (As of 2020/11/13) -  **778/1651 Solved**   
 Problem List (As of 2020/11/24) -  **788/1661 Solved**   
 Problem List (As of 2020/12/17) -  **801/1691 Solved**   
-Problem List (As of 2020/02/06) -  **831/1751 Solved**   
-Problem List (As of 2020/02/19) -  **853/1762 Solved**   
+Problem List (As of 2021/02/06) -  **831/1751 Solved**   
+Problem List (As of 2021/02/19) -  **853/1762 Solved**   
+Problem List (As of 2021/03/01) -  **871/1777 Solved**   
 |   #  |                                         Title                                         | Acceptance | Difficulty |     Type    |
 |:----:|:-------------------------------------------------------------------------------------:|:----------:|:----------:|:-----------:|
 | 0001 | Two Sum                                                                               |   45.90%   | Easy       | Algorithms  |
