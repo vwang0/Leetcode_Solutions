@@ -23,7 +23,6 @@ E = 4
 """
 import re
 import itertools
-
 def solve(puzzle):
     words = re.findall('[A-Z]+', puzzle.upper())
     unique_characters = set(''.join(words))
