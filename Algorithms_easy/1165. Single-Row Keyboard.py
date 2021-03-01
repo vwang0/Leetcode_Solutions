@@ -28,8 +28,7 @@ word[i] is an English lowercase letter.
 """
 class Solution:
     def calculateTime(self, keyboard: str, word: str) -> int:
-        cur_idx = 0
-        res = 0
+        cur_idx, res = 0, 0
         for w in word:
             nxt_idx = keyboard.index(w)
             res += abs(nxt_idx - cur_idx)
