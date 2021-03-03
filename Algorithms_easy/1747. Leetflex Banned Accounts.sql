@@ -1,4 +1,4 @@
-"""
+/*
 1747. Leetflex Banned Accounts
 Medium
 
@@ -51,7 +51,8 @@ Account ID 1 --> The account was active from "2021-02-01 09:00:00" to "2021-02-0
 Account ID 2 --> The account was active from two different addresses (6, 7) but in two different times.
 Account ID 3 --> The account was active from two different addresses (9, 13) on the same day but they do not intersect at any moment.
 Account ID 4 --> The account was active from "2021-02-01 17:00:00" to "2021-02-01 17:00:00" with two different IP addresses (10 and 11). It should be banned.
-"""
+*/
+
 SELECT DISTINCT a.account_id
 FROM LogInfo a, LogInfo b
 WHERE a.login BETWEEN b.login AND b.logout
