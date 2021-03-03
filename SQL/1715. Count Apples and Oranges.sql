@@ -79,3 +79,8 @@ box 3 has 16 + 20 (from the chest) = 36 apples and 7 + 10 (from the chest) = 17 
 Total number of apples = 6 + 24 + 27 + 27 + 17 + 14 + 36 = 151
 Total number of oranges = 15 + 25 + 8 + 28 + 15 + 15 + 17 = 123
 """
+
+SELECT SUM(B.apple_count + IFNULL(C.apple_count ,0)) apple_count, SUM(B.orange_count + IFNULL(C.orange_count, 0)) orange_count
+FROM Boxes B
+LEFT JOIN Chests C
+ON B.chest_id = C.chest_id 
