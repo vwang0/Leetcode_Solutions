@@ -1,5 +1,8 @@
 /*
 1517. Find Users With Valid E-Mails
+Easy
+
+SQL Schema
 Table: Users
 
 +---------------+---------+
@@ -50,10 +53,9 @@ The mail of user 2 doesn't have a domain.
 The mail of user 5 has # sign which is not allowed.
 The mail of user 6 doesn't have leetcode domain.
 The mail of user 7 starts with a period.
+
 */
 
 SELECT *
 FROM Users
-WHERE mail REGEXP '^[A-Za-z][A-Za-z0-9\_\.\-]*@leetcode\.com$'
-
-
+WHERE mail REGEXP '^[a-zA-Z][a-zA-Z0-9._-]*@leetcode.com$'
