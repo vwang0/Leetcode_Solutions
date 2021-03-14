@@ -1,20 +1,6 @@
 # [Leetcode Solutions](https://leetcode.com/vwang0/)
 
-Problem List (As of 2020/10/10) -  **705/1617 Solved**   
-Problem List (As of 2020/10/20) -  **736/1621 Solved**   
-Problem List (As of 2020/10/26) -  **759/1633 Solved**   
-Problem List (As of 2020/10/31) -  **768/1634 Solved**   
-Problem List (As of 2020/11/13) -  **778/1651 Solved**   
-Problem List (As of 2020/11/24) -  **788/1661 Solved**   
-Problem List (As of 2020/12/17) -  **801/1691 Solved**   
-Problem List (As of 2021/02/06) -  **831/1751 Solved**   
-Problem List (As of 2021/02/19) -  **853/1762 Solved**   
-Problem List (As of 2021/03/01) -  **874/1777 Solved**   
-Problem List (As of 2021/03/03) -  **879/1777 Solved**   
-Problem List (As of 2021/03/04) -  **891/1777 Solved**   
-Problem List (As of 2021/03/08) -  **914/1782 Solved**   
-Problem List (As of 2021/03/11) -  **928/1788 Solved**   
-Problem List (As of 2021/03/11) -  **943/1793 Solved**   
+
 |   #  |                                         Title                                         | Acceptance | Difficulty | Status |
 |:----:|:-------------------------------------------------------------------------------------:|:----------:|:----------:|:------:|
 | 0001 | Two Sum                                                                               |   46.50%   | Easy       |    x   |
@@ -1805,3 +1791,19 @@ Problem List (As of 2021/03/11) -  **943/1793 Solved**
 | 1786 | Number of Restricted Paths From First to Last Node                                    |   35.70%   | Medium     |        |
 | 1787 | Make the XOR of All Segments Equal to Zero                                            |   33.80%   | Hard       |        |
 | 1788 | Maximize the Beauty of the Garden    New                                              |   77.30%   | Hard       |        |
+
+Problem List (As of 2020/10/10) -  **705/1617 Solved**   
+Problem List (As of 2020/10/20) -  **736/1621 Solved**   
+Problem List (As of 2020/10/26) -  **759/1633 Solved**   
+Problem List (As of 2020/10/31) -  **768/1634 Solved**   
+Problem List (As of 2020/11/13) -  **778/1651 Solved**   
+Problem List (As of 2020/11/24) -  **788/1661 Solved**   
+Problem List (As of 2020/12/17) -  **801/1691 Solved**   
+Problem List (As of 2021/02/06) -  **831/1751 Solved**   
+Problem List (As of 2021/02/19) -  **853/1762 Solved**   
+Problem List (As of 2021/03/01) -  **874/1777 Solved**   
+Problem List (As of 2021/03/03) -  **879/1777 Solved**   
+Problem List (As of 2021/03/04) -  **891/1777 Solved**   
+Problem List (As of 2021/03/08) -  **914/1782 Solved**   
+Problem List (As of 2021/03/11) -  **928/1788 Solved**   
+Problem List (As of 2021/03/11) -  **943/1793 Solved**   
