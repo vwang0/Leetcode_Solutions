@@ -1,1 +1,17 @@
 [0m2021.04.04 21:40:13 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at d:\NETDrive\GH\Leetcode_Solutions\null\scalameta\metals\cache\lsp.trace.json[0m
+[0m2021.04.04 21:40:13 INFO  Starting Metals server with configuration: MetalsServerConfig(
+  glob-syntax=GlobSyntaxConfig(vscode),
+  status-bar=StatusBarConfig(off),
+  open-files-on-rename=false,
+  rename-file-threshold=300,
+  slow-task=SlowTaskConfig(off),
+  execute-client-command=ExecuteClientCommandConfig(off),
+  compilers=PresentationCompilerConfigImpl(false,Some(editor.action.triggerParameterHints),Some(editor.action.triggerSuggest),Map(scala/collection/mutable/ -> mutable., java/util/ -> ju.),Unicode,true,true,true,true,true,true,true,scala.meta.internal.pc.PresentationCompilerConfigImpl$$$Lambda$72/0x0000000800cafc40@48f278eb,20,SECONDS),
+  http=false,
+  input-box=false,
+  ask-to-reconnect=false,
+  icons=vscode,
+  statistics=StatisticsConfig(default),
+  bloop-port=default
+)[0m
+[0m2021.04.04 21:40:14 INFO  logging to file D:\NETDrive\GH\Leetcode_Solutions\.metals\metals.log[0m
