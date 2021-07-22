@@ -14,8 +14,7 @@ Table: Activity
 This table shows the activity of players of some game.
 Each row is a record of a player who logged in and played a number of games (possibly 0) before logging out on some day using some device.
 Write an SQL query that reports the fraction of players that logged in again on the day after the day they first logged in,
-for at least two consecutive days starting
-from their first login date, then divide that number by the total number of players. The query result format is in the following example:
+for at least two consecutive days starting from their first login date, then divide that number by the total number of players. The query result format is in the following example:
 Activity table:
 +-----------+-----------+------------+--------------+
 | player_id | device_id | event_date | games_played |
