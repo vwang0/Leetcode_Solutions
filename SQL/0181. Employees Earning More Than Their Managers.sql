@@ -21,4 +21,10 @@ FROM Employee AS a
 JOIN Employee AS b 
 ON a.ManagerId = b.Id
 WHERE a.Salary > b.Salary
+;
 
+SELECT a.Name 
+FROM Employee a, Employee b
+WHERE a.ManagerId = b.id
+AND a.Salary > b.Salary
+;
