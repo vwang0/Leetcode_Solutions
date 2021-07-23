@@ -33,7 +33,8 @@ FROM Employee AS e, Department AS d
 WHERE e.DepartmentId = d.Id AND
     e.Salary = (SELECT MAX(Salary)
     FROM Employee AS t
-    WHERE t.DepartmentId = e.DepartmentId);
+    WHERE t.DepartmentId = e.DepartmentId)
+;
 
 
 SELECT d.Name as Department, e.Name as Employee, e.Salary AS Salary
@@ -44,4 +45,4 @@ WHERE (d.Id, e.Salary) IN (
     SELECT DepartmentId, MAX(Salary) AS Salary
     FROM Employee
     GROUP BY DepartmentId)
-
+;

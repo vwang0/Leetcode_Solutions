@@ -30,6 +30,7 @@ SELECT Score,
        DENSE_RANK() OVER (
                           ORDER BY Score DESC) AS Rank
 FROM Scores
+;
 
 -- not using window function
 SELECT S1.Score, COUNT(DISTINCT S2.Score) Rank

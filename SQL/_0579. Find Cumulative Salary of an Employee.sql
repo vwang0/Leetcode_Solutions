@@ -54,8 +54,20 @@ Employ '3' has two salary records except its most recent pay month '4': month '3
 | 3  | 2     | 40     |
 
 */
+-- Solution 1
 SELECT   B.Id, MAX(B.Month) as Month, SUM(B.Salary) as Salary
 FROM     Employee A, Employee B
 WHERE    A.Id = B.Id AND B.Month BETWEEN (A.Month-3) AND (A.Month-1)
 GROUP BY A.Id, A.Month
 ORDER BY Id, Month DESC
+
+
+-- Solution 2
+SELECT id, month, Salary
+FROM (
+    SELECT id, month, SUM(Salary) OVER (Partition BY id ORDER BY month ROW 2 PRECEDING) AS Salary,
+    DENSE_RANK() OVER (PARTITION BY id ORDER BY month DESC) as mth_no
+    FROM Employee
+) temp
+WHERE mth_no > 1
+ORDER BY id, month DESC

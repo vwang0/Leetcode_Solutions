@@ -73,7 +73,7 @@ From 2019-01-06 to 2019-01-06 all tasks succeeded and system state was "succeede
         MAX(day) end_date
     FROM (
     SELECT fail_date day,
-            datediff(fail_date,'2011-1-1') - RANK() OVER(ORDER BY fail_date) flag
+            datediff(fail_date,'2011-01-01') - RANK() OVER(ORDER BY fail_date) flag
         FROM Failed
         WHERE year(fail_date)=2019
 ) t1
