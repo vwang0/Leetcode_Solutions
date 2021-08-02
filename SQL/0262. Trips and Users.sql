@@ -54,10 +54,6 @@ GROUP BY Request_at
 ;
 
 SELECT Request_at AS Day,
-    --    ROUND(SUM(Status IN ('cancelled_by_driver', 'cancelled_by_client'))/count(*),2) AS 'Cancellation Rate'
-    round(count(if(Trips.Status!='completed',1,NULL))/count(*),2) AS 'Cancellation Rate'
-
-SELECT Request_at AS Day,
     --    ROUND(SUM(Status IN ('cancelled_by_driver', 'cancelled_by_client'))/COUNT(*),2) AS 'Cancellation Rate'
     round(count(if(Trips.Status!='completed',1,NULL))/count(*),2) AS 'Cancellation Rate'
 FROM Trips
