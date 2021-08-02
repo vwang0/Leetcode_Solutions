@@ -43,19 +43,23 @@ For the above tables, your SQL query should return the following rows with the c
 +------------+-------------------+
 */
 SELECT Request_at AS Day, 
-ROUND(SUM(Status IN ('cancelled_by_driver', 'cancelled_by_client'))/count(*),2) AS 'Cancellation Rate'
+-- ROUND(SUM(Status IN ('cancelled_by_driver', 'cancelled_by_client'))/count(*),2) AS 'Cancellation Rate'
+round(count(if(Trips.Status!='completed',1,NULL))/count(*),2) AS 'Cancellation Rate'
 FROM Trips
 WHERE
 Client_Id NOT IN (SELECT Users_Id FROM Users WHERE Banned ='Yes' AND Role = 'client') AND
 Driver_Id NOT IN (SELECT Users_Id FROM Users WHERE Banned ='Yes' AND Role = 'driver') AND
 Request_at BETWEEN '2013-10-01' AND '2013-10-03'
 GROUP BY Request_at
+;
 
 SELECT Request_at AS Day,
-       ROUND(SUM(Status IN ('cancelled_by_driver', 'cancelled_by_client'))/count(*),2) AS 'Cancellation Rate'
+    --    ROUND(SUM(Status IN ('cancelled_by_driver', 'cancelled_by_client'))/count(*),2) AS 'Cancellation Rate'
+    round(count(if(Trips.Status!='completed',1,NULL))/count(*),2) AS 'Cancellation Rate'
 
 SELECT Request_at AS Day,
-       ROUND(SUM(Status IN ('cancelled_by_driver', 'cancelled_by_client'))/COUNT(*),2) AS 'Cancellation Rate'
+    --    ROUND(SUM(Status IN ('cancelled_by_driver', 'cancelled_by_client'))/COUNT(*),2) AS 'Cancellation Rate'
+    round(count(if(Trips.Status!='completed',1,NULL))/count(*),2) AS 'Cancellation Rate'
 FROM Trips
 WHERE Client_Id NOT IN
         (SELECT Users_ID
@@ -69,3 +73,4 @@ WHERE Client_Id NOT IN
              AND Role = 'driver')
     AND Request_at BETWEEN '2013-10-01' AND '2013-10-03'
 GROUP BY Request_at
+;

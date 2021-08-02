@@ -20,7 +20,7 @@ the above Person table should have the following rows:
 | 2  | bob@example.com  |
 +----+------------------+
 */
-DELETE p1.* 
+DELETE p1
 FROM Person AS p1, Person AS p2
 WHERE p1.Email = p2.Email AND p1.Id > p2.Id
 
