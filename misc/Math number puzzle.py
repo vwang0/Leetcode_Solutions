@@ -40,13 +40,12 @@ def solve(puzzle):
             if eval(equation):
                 return equation
     return "Not Found!"    
-
-
     
-
+solve("STCD - CDTS == TTDT")
+# ['6329 - 2936 == 3393', '7340 - 4037 == 3303']
 
 solve("WHITE + WATER == PICNIC")
-# '85642 + 83427 == 169069'
+# ['83642 + 85427 == 169069', '85642 + 83427 == 169069']
 
 solve("HAWAII + IDAHO + IOWA + OHIO == STATES")
 # '510199 + 98153 + 9301 + 3593 == 621246'

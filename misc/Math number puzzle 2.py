@@ -1,15 +1,12 @@
 """
-    STCD
-  - CDTS
-  -------
-    TTDT
-S for Square, T for Triangle, C for Circle, and D for Diamond.
+字母转数字通用解法
 """
 
 import re
 import itertools
 def solve(puzzle):
-    words = re.findall('[STCD]+', puzzle.upper())
+    ans = []
+    words = re.findall('[A-Z]+', puzzle.upper())
     unique_characters = set(''.join(words))
     assert len(unique_characters) <= 10, "It's bullshit!"
     first_letters = {word[0] for word in words}
@@ -23,10 +20,23 @@ def solve(puzzle):
         if zero not in guess[:n]:
             equation = puzzle.translate(dict(zip(characters, guess)))
             if eval(equation):
-                return equation
-    return "Not Found!"   
+                ans.append(equation)
+    return ans if ans else "Not Found!"    
 
 solve("STCD - CDTS == TTDT")
-# '6329 - 2936 == 3393'
+# ['6329 - 2936 == 3393', '7340 - 4037 == 3303']
+
+solve("WHITE + WATER == PICNIC")
+# ['83642 + 85427 == 169069', '85642 + 83427 == 169069']
 
 
+"""
+    STCD
+  - CDTS
+  -------
+    TTDT
+S for Square, T for Triangle, C for Circle, and D for Diamond.
+
+字母转数字通用解法
+
+"""
