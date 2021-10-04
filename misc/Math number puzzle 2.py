@@ -2,8 +2,7 @@
 字母转数字通用解法
 """
 
-import re
-import itertools
+import re, itertools
 def solve(puzzle):
     ans = []
     words = re.findall('[A-Z]+', puzzle.upper())
